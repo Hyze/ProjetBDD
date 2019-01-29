@@ -6,7 +6,6 @@ $(document).ready(function() {
 
 
 
-
   function graphe1() {
       var pie = document.getElementById('Pie').getContext('2d');
 
