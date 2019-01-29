@@ -1,0 +1,16 @@
+header{
+    width: fit-content;
+    height: 50%;
+}
+
+header.img-fluid{
+    display: inline-block;
+    height:20%;
+}
+
+#Home
+{
+    margin-top: 5em;
+}
+
+
