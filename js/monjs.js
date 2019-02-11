@@ -9,6 +9,90 @@ $(document).ready(function() {
     });
 
 
+  function table() {
+
+
+
+    $('#Adm').hide();
+    $('#date').hide();
+    $('#detA').hide();
+    $('#detP').hide();
+    $('#Loc').hide();
+    $('#Comp').hide();
+
+    $('#b1').click(function() {
+      $('#Adm').hide();
+      $('#date').hide();
+      $('#detA').hide();
+      $('#detP').hide();
+      $('#Loc').hide();
+      $('#Comp').show();
+
+    });
+    $('#b2').click(function() {
+      $('#Adm').show();
+      $('#date').hide();
+      $('#detA').hide();
+      $('#detP').hide();
+      $('#Loc').hide();
+      $('#Comp').hide();
+
+    });
+
+    $('#b3').click(function() {
+      $('#Adm').hide();
+      $('#date').show();
+      $('#detA').hide();
+      $('#detP').hide();
+      $('#Loc').hide();
+      $('#Comp').hide();
+
+    });
+
+
+    $('#b4').click(function() {
+      $('#Adm').hide();
+      $('#date').hide();
+      $('#detA').show();
+      $('#detP').hide();
+      $('#Loc').hide();
+      $('#Comp').hide();
+
+    });
+    $('#b4').click(function() {
+      $('#Adm').hide();
+      $('#date').hide();
+      $('#detA').show();
+      $('#detP').hide();
+      $('#Loc').hide();
+      $('#Comp').hide();
+
+    });
+    $('#b5').click(function() {
+      $('#Adm').hide();
+      $('#date').hide();
+      $('#detA').hide();
+      $('#detP').show();
+      $('#Loc').hide();
+      $('#Comp').hide();
+
+    });
+    $('#b6').click(function() {
+      $('#Adm').hide();
+      $('#date').hide();
+      $('#detA').hide();
+      $('#detP').hide();
+      $('#Loc').show();
+      $('#Comp').hide();
+
+    });
+
+
+
+  }
+
+  table();
+
   function graphe1_construct(data) {
     var pie = document.getElementById('Pie')
       .getContext('2d');
