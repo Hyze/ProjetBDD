@@ -9,89 +9,7 @@ $(document).ready(function() {
     });
 
 
-  function table() {
 
-
-
-    $('#Adm').hide();
-    $('#date').hide();
-    $('#detA').hide();
-    $('#detP').hide();
-    $('#Loc').hide();
-    $('#Comp').hide();
-
-    $('#b1').click(function() {
-      $('#Adm').hide();
-      $('#date').hide();
-      $('#detA').hide();
-      $('#detP').hide();
-      $('#Loc').hide();
-      $('#Comp').show();
-
-    });
-    $('#b2').click(function() {
-      $('#Adm').show();
-      $('#date').hide();
-      $('#detA').hide();
-      $('#detP').hide();
-      $('#Loc').hide();
-      $('#Comp').hide();
-
-    });
-
-    $('#b3').click(function() {
-      $('#Adm').hide();
-      $('#date').show();
-      $('#detA').hide();
-      $('#detP').hide();
-      $('#Loc').hide();
-      $('#Comp').hide();
-
-    });
-
-
-    $('#b4').click(function() {
-      $('#Adm').hide();
-      $('#date').hide();
-      $('#detA').show();
-      $('#detP').hide();
-      $('#Loc').hide();
-      $('#Comp').hide();
-
-    });
-    $('#b4').click(function() {
-      $('#Adm').hide();
-      $('#date').hide();
-      $('#detA').show();
-      $('#detP').hide();
-      $('#Loc').hide();
-      $('#Comp').hide();
-
-    });
-    $('#b5').click(function() {
-      $('#Adm').hide();
-      $('#date').hide();
-      $('#detA').hide();
-      $('#detP').show();
-      $('#Loc').hide();
-      $('#Comp').hide();
-
-    });
-    $('#b6').click(function() {
-      $('#Adm').hide();
-      $('#date').hide();
-      $('#detA').hide();
-      $('#detP').hide();
-      $('#Loc').show();
-      $('#Comp').hide();
-
-    });
-
-
-
-  }
-
-  table();
 
   function graphe1_construct(data) {
     var pie = document.getElementById('Pie')
@@ -128,7 +46,7 @@ $(document).ready(function() {
   function construc_graph2(data) {
     var tableau = JSON.parse(data);
     var array = Object.values(tableau);
-    console.log(array);
+
     var PhotoVille = document.getElementById('photoVille')
       .getContext('2d');
     var i = 0;
@@ -255,7 +173,7 @@ $(document).ready(function() {
       success: function(data) {
         var tableau = JSON.parse(data);
         var array = Object.values(tableau);
-        console.log(array[0]);
+
         $('#photoNb').html('Noir et blanc : ' + array[0] + ' photos ');
 
       },
@@ -270,7 +188,7 @@ $(document).ready(function() {
       success: function(data) {
         var tableau = JSON.parse(data);
         var array = Object.values(tableau);
-        console.log(array[0]);
+
         $('#couleur').html('Couleurs : ' + array[0] + ' photos ');
 
       },
@@ -286,7 +204,7 @@ $(document).ready(function() {
       success: function(data) {
         var tableau = JSON.parse(data);
         var array = Object.values(tableau);
-        console.log(array[0]);
+
         $('#photoReversible').html('Negatif : ' + array[0] + ' photos ');
 
       },
@@ -301,7 +219,7 @@ $(document).ready(function() {
       success: function(data) {
         var tableau = JSON.parse(data);
         var array = Object.values(tableau);
-        console.log(array[0]);
+
         $('#reverse').html('Inversible : ' + array[0] + ' photos ');
 
       },
