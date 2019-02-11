@@ -1,25 +1,29 @@
 <?php
+$conn_string = "host=localhost port=5432 dbname=projet user=postgres password=root";
+$connect = pg_connect($conn_string);
 
-function graphe()
-{
-    require 'db_connect.php';
-    $connect = dbconnect();
+ $donneeIncomplete = "SELECT count(*) from acompleter";
+ $donneeTotale ="SELECT count(article) from detail_photo";
 
-    $nbdataIncomplete="SELECT count(*)from acompleter;"
-    $dataTotale="SELECT count(article) from info; "
-
-    $res1=pg_query($connect,$nbdataIncomplete);
-    $res2=pg_query($connect,$dataTotale);
-    $row = pg_fetch_row($res1);
-    $row2 = pg_fetch_row($res2);
-    $array = array(
-        "Données Incomplete" => $row[0],
-        "Données Totale" => "$row2[0]",
-    );
+  $ret = pg_query($connect, $donneeIncomplete);
+  $res = pg_query($connect, $donneeTotale);
 
 
-echo "test";
-    //echo json_encode($array, JSON_FORCE_OBJECT);
-}
 
-graphe();
+  $row = pg_fetch_row($res);
+
+  $line = pg_fetch_row($ret);
+
+
+  $array = array("donnée totale " =>$row[0] ,"donnée incomlete "=> $line[0]);
+
+
+
+  echo json_encode($array,JSON_FORCE_OBJECT);
+
+
+
+  if (!pg_close($connect)) {
+      echo "Failed to close connection to " . pg_host($connect) . ": " .
+  pg_last_error($connect);
+  }

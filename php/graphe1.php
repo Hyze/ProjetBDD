@@ -6,11 +6,9 @@
  * Time: 19:39
  */
 
+ $conn_string = "host=localhost port=5432 dbname=projet user=postgres password=root";
+ $connect = pg_connect($conn_string);
 
-function graphe()
-{
-    require('db_connect.php');
-    $connect = dbconnect();
 
     $nbVilleTOtale = "SELECT count(nom_ville) FROM localisation where latlambert93 is null";
     $nbVilleLoiret = "SELECT count(nom_ville) FROM localisation where latlambert93 !='0'";
@@ -30,5 +28,9 @@ function graphe()
 
     echo json_encode($array, JSON_FORCE_OBJECT);
 
+
+
+if (!pg_close($connect)) {
+    echo "Failed to close connection to " . pg_host($connect) . ": " .
+pg_last_error($connect) . "<br/>\n";
 }
-graphe();

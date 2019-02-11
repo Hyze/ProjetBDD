@@ -7,16 +7,18 @@
  */
 
 
-function dbconnect()
+function dbconnect($val)
 {
-	$conn_string = "host=localhost port=5432 dbname=projet user=postgres password=root";
-	$dbconn = pg_connect($conn_string);
-
-	if (!$dbconn) {
-
-	} else {
-
-	}
-	return $dbconn;
+    if ($val == true) {
+        $conn_string = "host=localhost port=5432 dbname=projet user=postgres password=root";
+        $dbconn = pg_connect($conn_string);
+        return $dbconn;
+    } else {
+        if (!pg_close($dbconn)) {
+            return "Failed to close connection to " . pg_host($dbconn) . ": " .
+       pg_last_error($dbconn) . "<br/>\n";
+        } else {
+            return "Successfully disconnected from database";
+        }
+    }
 }
-?>
