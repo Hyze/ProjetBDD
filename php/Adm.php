@@ -4,7 +4,7 @@ $conn_string = "host=localhost port=5432 dbname=projet user=postgres password=ro
 $connect = pg_connect($conn_string);
 
 
-$result = pg_query($connect, "SELECT * FROM administratif");
+$result = pg_query($connect, "SELECT * FROM administratif where reference_cindoc is not null ");
 if (!$result) {
   echo "Une erreur est survenue.\n";
   exit;
