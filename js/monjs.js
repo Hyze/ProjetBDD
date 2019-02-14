@@ -8,22 +8,27 @@ $(document).ready(function() {
         .toggleClass('active');
     });
 
-  function scroll_to_top(div) {
-    $(div).click(function() {
-      $('html,body').animate({
-        scrollTop: 0
-      }, 'slow');
-    });
-    $(window).scroll(function() {
-      if ($(window).scrollTop() < 500) {
-        $(div).fadeOut();
-      } else {
-        $(div).fadeIn();
-      }
-    });
-  }
-  scroll_to_top("#scroll_to_top");
+  $('#visualisation').hide();
 
+  $("#stat").click(function() {
+    $('#visualisation').hide();
+    $('#Home').show();
+  });
+
+  $("#visu").click(function() {
+    $('#Home').hide();
+    $('#visualisation').show();
+  });
+
+  $("#stat1").click(function() {
+    $('#visualisation').hide();
+    $('#Home').show();
+  });
+
+  $("#visu1").click(function() {
+    $('#Home').hide();
+    $('#visualisation').show();
+  });
 
   function graphe1_construct(data) {
     var pie = document.getElementById('Pie')

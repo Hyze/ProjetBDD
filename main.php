@@ -1,4 +1,18 @@
 <!doctype html>
+<?php
+// On démarre la session (ceci est indispensable dans toutes les pages de notre section membre)
+
+session_start ();
+// On récupère nos variables de session
+if (isset($_SESSION['login']) && isset($_SESSION['pwd'])) {
+  echo '<html>';
+
+}
+else {
+  echo 'Les variables ne sont pas déclarées.';
+}
+?>
+
 <html>
 
 <head>
@@ -9,13 +23,17 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/bootstrap-reboot.css">
   <link rel="stylesheet" href="css/bootstrap-grid.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+  <link defer rel="stylesheet" href="css/style.css">
+  <script src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/pace-theme-minimal.css">
+  <!-- <link rel="stylesheet" href="css/pace-theme-minimal.css" />-->
+
 </head>
 
 <body>
+  <div id="top">
+
+  </div>
   <div class=" wrapper">
     <!-- Sidebar Holder -->
     <nav id="sidebar">
@@ -24,18 +42,25 @@
       </div>
 
       <ul class="list-unstyled components">
-        <li class="active">
-          <a href="#Home">Statistique Generale</a>
+        <li>
+          <a href="#top" id="stat">Statistique Generale</a>
         </li>
         <li>
-          <a href="#visualisation">Visualiser les tables</a>
+          <a href="#top" id='visu'>Visualiser les tables</a>
         </li>
-        <li>
-          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Modifier les données</a>
-        </li>
-        <li>
-          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Connexion Admin</a>
-        </li>
+<?php
+if($_SESSION['login'] == 'admin'){
+
+  echo "<li> <a href=\"#pageSubmenu\" data-toggle=\"collapse\" aria-expanded=\"false\">Modifier les données</a>  </li>" ;
+}
+
+
+if($_SESSION['login']=='user'){
+   echo "  <li><a href=\"index.php\" data-toggle=\"collapse\" aria-expanded=\"false\" id=\"log\">Connexion Admin</a></li>";
+}
+
+ ?>
+
       </ul>
     </nav>
 
@@ -57,17 +82,26 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#Home">Statistique Generale</a>
+                <a class="nav-link" href="#top" id="stat1" >Statistique Generale</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#visualisation">Visualiser les tables </a>
+                <a class="nav-link" href="#top" id="visu1">Visualiser les tables </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Modifier les données</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Connexion</a>
-              </li>
+              <?php
+              if($_SESSION['login'] == 'admin'){
+
+                echo "  <li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">Modifier les données</a></li>" ;
+              }
+
+
+              if($_SESSION['login']=='user'){
+                 echo "<li class=\"nav-item\"><a class=\"nav-link\" id=\"log\" href=\"index.php\">Connexion Admin</a> </li> ";
+              }
+
+               ?>
+
+
+
             </ul>
           </div>
         </div>
@@ -139,6 +173,7 @@
 
       </section>
       <hr />
+
       <section id="visualisation">
         <div class="card-text" style="text-align: center">
           <h3>Visualisations des tables </h3>
@@ -216,9 +251,6 @@
     </div>
     </section>
 
-    <div id='scroll_to_top' class='opacity'>
-      <img src="img/top.png" alt="#Home">
-    </div>
 
 
   </div>
@@ -226,15 +258,24 @@
 </body>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
-<script src="js/bootstrap.bundle.js"></script>
-<script src="js/bootstrap.js" type="text/javascript"></script>
-<script src="js/Chart.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-<script type="text/javascript" src="js/pace.min.js"></script>
-<script src="js/monjs.js" type="text/javascript"></script>
-<script type="text/javascript" src="js/table.js"></script>
+<script defer src="js/jquery-3.3.1.js" type="text/javascript"></script>
+<?php
+if($_SESSION['login']=='user'){
+echo "<script defer type=\"text/javascript\" src=\"js/login.js\"></script>";
+}
+?>
+
+<script defer src="js/monjs.js" type="text/javascript"></script>
+<script async src="js/bootstrap.js" type="text/javascript"></script>
+<script async src="js/bootstrap.bundle.js"></script>
+<script async type="text/javascript" src="js/table.js"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script async type="text/javascript" src="js/pace.min.js"></script>
+<script async src="js/Chart.js"></script>
+<script defer type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script async type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+
+</script>
 
 </html>
