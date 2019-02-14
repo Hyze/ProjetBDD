@@ -48,7 +48,7 @@ else {
         <li>
           <a href="#top" id='visu'>Visualiser les tables</a>
         </li>
-<?php
+        <?php
 if($_SESSION['login'] == 'admin'){
 
   echo "<li> <a href=\"#pageSubmenu\" data-toggle=\"collapse\" aria-expanded=\"false\">Modifier les données</a>  </li>" ;
@@ -82,7 +82,7 @@ if($_SESSION['login']=='user'){
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#top" id="stat1" >Statistique Generale</a>
+                <a class="nav-link" href="#top" id="stat1">Statistique Generale</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#top" id="visu1">Visualiser les tables </a>
@@ -248,8 +248,264 @@ if($_SESSION['login']=='user'){
           </div>
 
         </div>
-    </div>
+      </section>
+
+      <section id="modif">
+
+        <div class="card-text" style="text-align: center">
+          <h3>Modification des tables </h3>
+        </div>
+        <hr />
+        <div class="card text-center">
+
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked>Inserer
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="option2" autocomplete="off"> Mettre a jour
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="option3" autocomplete="off"> Supprimer
+            </label>
+          </div>
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item" id="add">
+
+
+                <button type="button" id="b1F" class="btn btn-outline-primary">A completer</button>
+
+
+                <button type="button" id="b2F" class="btn btn-outline-primary">Administratif</button>
+
+
+                <button type="button" id="b3F" class="btn btn-outline-primary">Date</button>
+
+
+                <button type="button" id="b4F" class="btn btn-outline-primary">Details Artistique</button>
+
+
+                <button type="button" id="b5F" class="btn btn-outline-primary">Details Photos</button>
+
+
+                <button type="button" id="b6F" class="btn btn-outline-primary">Localisation</button>
+          </div>
+          </li>
+          </ul>
+        </div>
+
+
+        <div class="card-body">
+          <div id="comp">
+            <form id="acomp">
+              <div class="form-row">
+                <div class="col">
+                  <label>Date</label>
+                  <input type="text" class="form-control" name="date">
+                </div>
+                <div class="col">
+                  <label for="">Article</label>
+                  <input type="text" class="form-control" name="article">
+                </div>
+                <div class="col">
+                  <label for="">Reference cindoc</label>
+                  <input type="text" class="form-control" name="reference_cindoc">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col">
+                  <label>Serie</label>
+                  <input type="text" class="form-control" name="serie">
+                </div>
+                <div class="col">
+                  <label for="">Description</label>
+                  <input type="text" class="form-control" name="description">
+                </div>
+                <div class="col">
+                  <label for="">index personne</label>
+                  <input type="text" class="form-control" name="index_personne">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col">
+                  <label>Negatif / Inversible </label>
+                  <input type="text" class="form-control" name="negatif_reversible">
+                </div>
+                <div class="col">
+                  <label for="">Couleur / noir et blanc</label>
+                  <input type="text" class="form-control" name="couleur_noirblanc">
+                </div>
+                <div class="col">
+                  <label for="">Discriminants</label>
+                  <input type="text" class="form-control" name="discriminant">
+                </div>
+              </div>
+
+
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+          </div>
+          <div id="adm">
+            <form>
+              <div class="form-row">
+                <div class="col">
+                  <label>Serie</label>
+                  <input type="text" class="form-control" name="serie">
+                </div>
+                <div class="col">
+                  <label for="">Article</label>
+                  <input type="text" class="form-control" name="article">
+                </div>
+                <div class="col">
+                  <label for="">Reference cindoc</label>
+                  <input type="text" class="form-control" name="reference_cindoc">
+                </div>
+                <div class="col">
+                  <label for="">Discriminants</label>
+                  <input type="text" class="form-control" name="discriminant">
+                </div>
+              </div>
+        
+
+          <button type="submit" class="btn btn-primary">Envoyer</button>
+          </form>
+
+        </div>
+
+
+        <div id="date1">
+          <form>
+            <div class="form-row">
+              <div class="col">
+                <label>Annee</label>
+                <input type="text" class="form-control" name="annee">
+              </div>
+              <div class="col">
+                <label for="">Mois</label>
+                <input type="text" class="form-control" name="mois">
+              </div>
+              <div class="col">
+                <label for="">Jour</label>
+                <input type="text" class="form-control" name="jour">
+              </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+        </form>
+
+        </div>
+
+        <div id="deta">
+          <form>
+            <div class="form-row">
+              <div class="col">
+                <label>Remarque </label>
+                <input type="text" class="form-control" name="remarque">
+              </div>
+        </div>
+
+          <div class="form-row">
+            <div class="col">
+              <label>Nombre de cliché</label>
+              <input type="text" class="form-control" name="nb_cliche">
+            </div>
+            <div class="col">
+              <label for="">Negatif / Inversible</label>
+              <input type="text" class="form-control" name="negatif_reversible">
+            </div>
+            <div class="col">
+              <label for="">Couleur / Noir et blanc</label>
+              <input type="text" class="form-control" name="couleur_noirblanc">
+            </div>
+            <div class="col">
+              <label for="">Taille du cliché</label>
+              <input type="text" class="form-control" name="taille_cliche">
+            </div>
+      </div>
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+        </form>
+        </div>
+
+
+        <div id="detp">
+          <form>
+            <div class="form-row">
+              <div class="col">
+                <label>Article</label>
+                <input type="text" class="form-control" name="article">
+              </div>
+              <div class="col">
+                <label for="">Sujet</label>
+                <input type="text" class="form-control" name="sujet">
+              </div>
+              <div class="col">
+                <label for="">Description</label>
+                <input type="text" class="form-control" name="description">
+              </div>
+        </div>
+
+          <div class="form-row">
+            <div class="col">
+              <label>Notes de bas de page</label>
+              <input type="text" class="form-control" name="notebasdepage">
+            </div>
+            <div class="col">
+              <label for="">Fihier numérique</label>
+              <input type="text" class="form-control" name="fichier_numerique">
+            </div>
+            <div class="col">
+              <label for="">Fichier iconographique</label>
+              <input type="text" class="form-control" name="fichier_iconographique">
+            </div>
+            <div class="col">
+              <label for="">Index personne</label>
+              <input type="text" class="form-control" name="index_personne">
+            </div>
+      </div>
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+        </form>
+
+        </div>
+
+        <div id="locF">
+          <form>
+            <div class="form-row">
+              <div class="col">
+                <label>Ville</label>
+                <input type="text" class="form-control" name="nom_ville">
+              </div>
+              <div class="col">
+                <label for="">Latitude (Lambert93)</label>
+                <input type="text" class="form-control" name="lat">
+              </div>
+              <div class="col">
+                <label for="">Longitude (Lambert93)</label>
+                <input type="text" class="form-control" name="long">
+              </div>
+        </div>
+        <button type="submit" class="btn btn-primary">envoyer</button>
+        </form>
+
+        </div>
+
+
+
+
+
+
+
+
+    </div><!-- card body -->
     </section>
+  </div><!-- content -->
+
+
+  </div><!-- wrapper-->
+
+
+
+
+
 
 
 
@@ -264,7 +520,9 @@ if($_SESSION['login']=='user'){
 echo "<script defer type=\"text/javascript\" src=\"js/login.js\"></script>";
 }
 ?>
+<script defer type="text/javascript" src="js/form.js">
 
+</script>
 <script defer src="js/monjs.js" type="text/javascript"></script>
 <script async src="js/bootstrap.js" type="text/javascript"></script>
 <script async src="js/bootstrap.bundle.js"></script>
