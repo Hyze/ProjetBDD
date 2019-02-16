@@ -298,7 +298,7 @@ if($_SESSION['login']=='user'){
 
         <div class="card-body">
           <div id="comp">
-            <form id="acomp">
+            <form id="acomp" action="php/inserComp.php" method="post">
               <div class="form-row">
                 <div class="col">
                   <label>Date</label>
@@ -366,7 +366,7 @@ if($_SESSION['login']=='user'){
                   <input type="text" class="form-control" name="discriminant">
                 </div>
               </div>
-        
+
 
           <button type="submit" class="btn btn-primary">Envoyer</button>
           </form>
@@ -520,9 +520,7 @@ if($_SESSION['login']=='user'){
 echo "<script defer type=\"text/javascript\" src=\"js/login.js\"></script>";
 }
 ?>
-<script defer type="text/javascript" src="js/form.js">
-
-</script>
+<script defer type="text/javascript" src="js/form.js"></script>
 <script defer src="js/monjs.js" type="text/javascript"></script>
 <script async src="js/bootstrap.js" type="text/javascript"></script>
 <script async src="js/bootstrap.bundle.js"></script>

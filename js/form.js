@@ -85,4 +85,23 @@ $(document).ready(function() {
 
   form();
 
+
+  $("#option1").click(function() {
+    console.log("stylesheet");
+    $("#acomp").attr('action', 'php/inserComp.php')
+  });
+
+  $("#option2").click(function() {
+    console.log('tests');
+    $("#acomp").attr('action', 'php/updateComp.php')
+  });
+
+  // RECUP la val des bouttons une fois fait ca sera bons
+
+
+
+
+
+
+
 });
