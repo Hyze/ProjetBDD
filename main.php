@@ -490,12 +490,11 @@ else {
 
                 <div id="update">
                     <div id="updateComp">
-                        <form>
-
+                        <form action="php/update/updateComp.php" method="post" >
                             <div class="form-row ">
                                 <div class="col-auto my-1">
                                     <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs a modifier</label>
-                                    <select id="valmodif"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                    <select name="valmodif"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                                         <option selected>Choose...</option>
                                         <option value="date">Date</option>
                                         <option value="article">Article</option>
@@ -513,7 +512,7 @@ else {
                                 </div>
                                 <div class="col-auto my-1">
                                     <label>Valeur a modifier</label>
-                                    <input type="text" class="form-control" id="valuemodif">
+                                    <input type="text" class="form-control" name="valuemodif">
                                 </div>
 
                             </div>
@@ -521,7 +520,7 @@ else {
                             <div class="form-row ">
                                 <div class="col-auto my-1">
                                     <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs a modifier</label>
-                                    <select id="new" name="newval"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                    <select name="newval"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                                         <option selected>Choose...</option>
                                         <option value="date">Date</option>
                                         <option value="article">Article</option>
@@ -539,19 +538,19 @@ else {
                                 </div>
                                 <div class="col-auto my-1">
                                     <label>Nouvelle valeur</label>
-                                    <input type="text" class="form-control" id="newvalue">
+                                    <input type="text" class="form-control" name="newvalue">
                                 </div>
 
                             </div>
                             <div class="col-auto my-1">
-                                <button type="button" class="btn btn-primary" id="uComp">Envoyer</button>
+                                <button type="submit" class="btn btn-primary" id="uComp">Envoyer</button>
                             </div>
                         </form>
 
                     </div>
 
                     <div id="updateAdm">
-                        <form >
+                        <form action="php/update/updateAdm.php" method="post">
 
                             <div class="form-row ">
                                 <div class="col-auto my-1">
@@ -589,7 +588,7 @@ else {
 
                             </div>
                             <div class="col-auto my-1">
-                                <button type="button" class="btn btn-primary" id="uAdm">Submit</button>
+                                <button type="submit" class="btn btn-primary" id="uAdm">Submit</button>
                             </div>
                         </form>
 
@@ -600,7 +599,7 @@ else {
 
 
                     <div id="updateDate">
-                        <form >
+                        <form action="php/update/updateDate.php" method="post">
                             <div class="form-row ">
                                 <div class="col-auto my-1">
                                     <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs a modifier</label>
@@ -635,7 +634,7 @@ else {
 
                             </div>
                             <div class="col-auto my-1">
-                                <button type="button" class="btn btn-primary" id="uDate">Submit</button>
+                                <button type="submit" class="btn btn-primary" id="uDate">Submit</button>
                             </div>
                         </form>
 
@@ -644,7 +643,7 @@ else {
 
 
                     <div id="updatedetA">
-                        <form >
+                        <form action="php/update/updatedetA.php" method="post">
 
                             <div class="form-row ">
                                 <div class="col-auto my-1">
@@ -686,7 +685,7 @@ else {
 
                             </div>
                             <div class="col-auto my-1">
-                                <button type="button" class="btn btn-primary" id="udetA">Submit</button>
+                                <button type="submit" class="btn btn-primary" id="udetA">Submit</button>
                             </div>
                         </form>
 
@@ -694,7 +693,7 @@ else {
 
 
                     <div id="updatedetP">
-                        <form >
+                        <form action="php/update/updatedetP.php" method="post" >
 
                             <div class="form-row ">
                                 <div class="col-auto my-1">
@@ -738,7 +737,7 @@ else {
 
                             </div>
                             <div class="col-auto my-1">
-                                <button type="button" class="btn btn-primary" id="udetP">Submit</button>
+                                <button type="submit" class="btn btn-primary" id="udetP">Submit</button>
                             </div>
                         </form>
 
@@ -746,7 +745,7 @@ else {
 
 
                     <div id="updateLoc">
-                        <form >
+                        <form action="php/update/updateLoc.php" method="post">
                             <div class="form-row ">
                                 <div class="col-auto my-1">
                                     <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs a modifier</label>
@@ -781,7 +780,7 @@ else {
 
                             </div>
                             <div class="col-auto my-1">
-                                <button type="button" class="btn btn-primary" id="uLoc">Submit</button>
+                                <button type="submit" class="btn btn-primary" id="uLoc">Submit</button>
                             </div>
                         </form>
 
@@ -790,37 +789,12 @@ else {
                 </div> <!--update part -->
 
         <div id="delete">
-            <form >
 
+            <div id="delComp">
+            <form action="php/delete/delComp.php" method="post">
                 <div class="form-row ">
                     <div class="col-auto my-1">
-                        <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs a modifier</label>
-                        <select name="valmodif"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                            <option selected>Choose...</option>
-                            <option value="date">Date</option>
-                            <option value="article">Article</option>
-                            <option value="reference_cindoc">Reference Cindoc</option>
-                            <option value="serie">Serie</option>
-                            <option value="nom_ville">Nom ville</option>
-                            <option value="sujet">sujet</option>
-                            <option value="description">Description</option>
-                            <option value="index_personne">Index personne</option>
-                            <option value="nb_cliche">Nombre de cliché</option>
-                            <option value="negatif_reversible">Negatif / Inversible</option>
-                            <option value="couleur_noirblanc">Couleur / Noir et blanc</option>
-                            <option value="discriminant">Discriminant</option>
-                        </select>
-                    </div>
-                    <div class="col-auto my-1">
-                        <label>Valeur a modifier</label>
-                        <input type="text" class="form-control" name="valuemodif">
-                    </div>
-
-                </div>
-
-                <div class="form-row ">
-                    <div class="col-auto my-1">
-                        <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs a modifier</label>
+                        <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs</label>
                         <select name="newval"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                             <option selected>Choose...</option>
                             <option value="date">Date</option>
@@ -838,22 +812,158 @@ else {
                         </select>
                     </div>
                     <div class="col-auto my-1">
-                        <label>Nouvelle valeur</label>
+                        <label>Valeur a modifier</label>
                         <input type="text" class="form-control" name="newvalue">
                     </div>
 
                 </div>
                 <div class="col-auto my-1">
-                    <button type="button" class="btn btn-primary" id="uComp">Submit</button>
+                    <button type="submit" class="btn btn-primary" id="del">Submit</button>
                 </div>
             </form>
 
-        </div>
+            </div>
+
+                <div id="delAdm">
+                    <form action="php/delete/deleteAdm.php" method="post">
+                        <div class="form-row ">
+                            <div class="col-auto my-1">
+                                <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs </label>
+                                <select name="newval"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                    <option selected>Choose...</option>
+                                    <option value="serie">Serie</option>
+                                    <option value="article">Article</option>
+                                    <option value="reference_cindoc">Reference Cindoc</option>
+                                    <option value="discriminant">Discriminant</option>
+                                </select>
+                            </div>
+                            <div class="col-auto my-1">
+                                <label>Valeur a supprimer</label>
+                                <input type="text" class="form-control" name="newvalue">
+                            </div>
+
+                        </div>
+                        <div class="col-auto my-1">
+                            <button type="submit" class="btn btn-primary" >Submit</button>
+                        </div>
+                    </form>
+                    </form>
+                </div>
+
+                <div id="delDate">
+                    <form action="php/delete/deleteDate.php" method="post">
+                    <div class="form-row ">
+                        <div class="col-auto my-1">
+                            <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs a modifier</label>
+                            <select name="newval"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <option selected>Choose...</option>
+                                <option value="jour">Jour</option>
+                                <option value="mois">Mois</option>
+                                <option value="annee">Annee</option>
+                            </select>
+                        </div>
+                        <div class="col-auto my-1">
+                            <label>Nouvelle valeur</label>
+                            <input type="text" class="form-control" name="newvalue">
+                        </div>
+
+                    </div>
+                    <div class="col-auto my-1">
+                        <button type="submit" class="btn btn-primary" id="uDate">Submit</button>
+                    </div>
+                    </form>
+                </div>
+
+
+            <div id="deldetA">
+
+                <form action="php/delete/deldetA.php" method="post">
+                    <div class="form-row ">
+                        <div class="col-auto my-1">
+                            <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs a modifier</label>
+                            <select name="newval"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <option selected>Choose...</option>
+                                <option value="remarque">Remarque</option>
+                                <option value="taille_cliche">Taille du cliche</option>
+                                <option value="nb_cliche">Nombre de cliché</option>
+                                <option value="negatif_reversible">Negatif / Inversible</option>
+                                <option value="couleur_noirblanc">Couleur / Noir et blanc</option>
+                                <option value="discriminant">Discriminant</option>
+                            </select>
+                        </div>
+                        <div class="col-auto my-1">
+                            <label>Nouvelle valeur</label>
+                            <input type="text" class="form-control" name="newvalue">
+                        </div>
+
+                    </div>
+                    <div class="col-auto my-1">
+                        <button type="submit" class="btn btn-primary" id="udetA">Submit</button>
+                    </div>
+                </form>
+
+            </div>
 
 
 
 
+            <div id="deldetP">
+                <form action="php/delete/deldetP.php" method="post">
 
+                    <div class="form-row ">
+                        <div class="col-auto my-1">
+                            <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs a modifier</label>
+                            <select name="newval"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <option selected>Choose...</option>
+                                <option value="notebasdepage">Note de bas de page</option>
+                                <option value="article">Article</option>
+                                <option value="fichier_iconographique">Fichier iconographique</option>
+                                <option value="fichier_numerique">Fichier numerique</option>
+                                <option value="sujet">sujet</option>
+                                <option value="description">Description</option>
+                                <option value="index_personne">Index personne</option>
+                            </select>
+                        </div>
+                        <div class="col-auto my-1">
+                            <label>Nouvelle valeur</label>
+                            <input type="text" class="form-control" name="newvalue">
+                        </div>
+
+                    </div>
+                    <div class="col-auto my-1">
+                        <button type="submit" class="btn btn-primary" id="udetP">Submit</button>
+                    </div>
+                </form>
+
+
+            </div>
+
+
+
+
+            <div id="delLoc">
+                <form action="php/delete/deleteLoc.php" method="post">
+                    <div class="form-row ">
+                        <div class="col-auto my-1">
+                            <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs a modifier</label>
+                            <select name="newval"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <option selected>Choose...</option>
+                                <option value="nom_ville">Ville</option>
+                                <option value="lat">Latitude (Lambert93)</option>
+                                <option value="long">Longitude (Lambert93)</option>
+                            </select>
+                        </div>
+                        <div class="col-auto my-1">
+                            <label>Nouvelle valeur</label>
+                            <input type="text" class="form-control" name="newvalue">
+                        </div>
+
+                    </div>
+                    <div class="col-auto my-1">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
 
 
             </div><!---delete part -->

@@ -1,28 +1,4 @@
 <?php
-
-if(isset($_POST['valmodif'])){
-    $select1 = $_POST['valmodif'];
-    $amodifier=0;
-    switch ($select1) {
-        case 'remarque':
-            $amodifier='remarque';
-            break;
-        case 'taille_cliche':
-            $amodifier='taille_cliche';
-            break;
-        case 'nb_cliche':
-            $amodifier='nb_cliche';
-            break;
-        case 'negatif_reversible':
-            $amodifier = 'negatif_reversible';
-            break;
-        case 'couleur_noirblanc':
-            $amodifier='couleur_noirblanc';
-            break;
-    }
-
-}
-
 if(isset($_POST['newval'])){
     $select2 = $_POST['newval'];
     $new=0;
@@ -47,7 +23,7 @@ if(isset($_POST['newval'])){
 
 }
 
-$valuechercher=$_POST['valuemodif'];
+
 $newvalue=$_POST['newvalue'];
 
 $conn_string = "host=localhost port=5432 dbname=projet user=administrateur  password=admin";
@@ -55,7 +31,7 @@ $conn_string = "host=localhost port=5432 dbname=projet user=administrateur  pass
 if($connect = pg_connect($conn_string)){
 
 }
-$requete="UPDATE detail_artistique SET $new ='$newvalue' WHERE $amodifier='$valuechercher';";
+$requete="DELETE FROM detail_artistique WHERE $new ='$newvalue' ;";
 
 
 
@@ -69,4 +45,3 @@ if (!pg_close($connect)) {
         pg_last_error($connect) . "<br/>\n";
 }
 header('Location: ../../main.php');
-?>

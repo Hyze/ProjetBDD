@@ -14,6 +14,12 @@ $(document).ready(function() {
         $('#updatedetA').hide();
         $('#updatedetP').hide();
         $('#updateLoc').hide();
+        $('#delComp').hide();
+        $('#delDate').hide();
+        $('#delAdm').hide();
+        $('#deldetA').hide();
+        $('#deldetP').hide();
+        $('#delLoc').hide();
 
         $('#b1F').click(function() {
             $('#adm').hide();
@@ -28,6 +34,12 @@ $(document).ready(function() {
             $('#updatedetA').hide();
             $('#updatedetP').hide();
             $('#updateLoc').hide();
+            $('#delComp').show();
+            $('#delDate').hide();
+            $('#delAdm').hide();
+            $('#deldetA').hide();
+            $('#deldetP').hide();
+            $('#delLoc').hide();
 
 
 
@@ -45,7 +57,12 @@ $(document).ready(function() {
             $('#updatedetA').hide();
             $('#updatedetP').hide();
             $('#updateLoc').hide();
-
+            $('#delComp').hide();
+            $('#delDate').hide();
+            $('#delAdm').show();
+            $('#deldetA').hide();
+            $('#deldetP').hide();
+            $('#delLoc').hide();
         });
 
         $('#b3F').click(function() {
@@ -61,7 +78,12 @@ $(document).ready(function() {
             $('#updatedetA').hide();
             $('#updatedetP').hide();
             $('#updateLoc').hide();
-
+            $('#delComp').hide();
+            $('#delDate').show();
+            $('#delAdm').hide();
+            $('#deldetA').hide();
+            $('#deldetP').hide();
+            $('#delLoc').hide();
 
         });
 
@@ -79,6 +101,12 @@ $(document).ready(function() {
             $('#updatedetA').show();
             $('#updatedetP').hide();
             $('#updateLoc').hide();
+            $('#delComp').hide();
+            $('#delDate').hide();
+            $('#delAdm').hide();
+            $('#deldetA').show();
+            $('#deldetP').hide();
+            $('#delLoc').hide();
         });
         $('#b5F').click(function() {
             $('#adm').hide();
@@ -93,6 +121,12 @@ $(document).ready(function() {
             $('#updatedetA').hide();
             $('#updatedetP').show();
             $('#updateLoc').hide();
+            $('#delComp').hide();
+            $('#delDate').hide();
+            $('#delAdm').hide();
+            $('#deldetA').hide();
+            $('#deldetP').show();
+            $('#delLoc').hide();
         });
         $('#b6F').click(function() {
             $('#adm').hide();
@@ -107,6 +141,12 @@ $(document).ready(function() {
             $('#updatedetA').hide();
             $('#updatedetP').hide();
             $('#updateLoc').show();
+            $('#delComp').hide();
+            $('#delDate').hide();
+            $('#delAdm').hide();
+            $('#deldetA').hide();
+            $('#deldetP').hide();
+            $('#delLoc').show();
 
         });
 
@@ -121,16 +161,21 @@ $(document).ready(function() {
 
         $('#update').hide();
         $('#insert').show();
+        $("#delete").hide();
     });
 
     $("#option2").click(function() {
 
         $('#insert').hide();
         $('#update').show();
+        $("#delete").hide();
     });
 
     $('#option3').click(function () {
-        $('#acomp').attr('action',"php/delComp.php")
+        $('#insert').hide();
+        $('#update').hide();
+        $("#delete").show();
+
     });
 
 
@@ -214,7 +259,6 @@ $(document).ready(function() {
             "&index_personne="+$('#findex_personne').val()+
             "&fichier_numerique="+$('#bfichier_numerique').val()+
             "&fichier_iconographique="+$('#bfichier_iconographique').val() ;
-
         $.ajax({
             type: 'POST',
             url: "php/insert/inserdetP.php",
@@ -240,88 +284,7 @@ $(document).ready(function() {
 
         })
     });
-    $('#uComp').click(function () {
-        $("#valmodif").change(function () {
 
-            var values = $(this).text();
-            console.log(values)
-
-       $('#new').change(function (values) {
-           var newval = $(this).text();
-           var old = $('#valuemodif').val();
-
-           var new1 = $("#newvalue").val();
-
-
-           var result = values+"="+old+"&"+new1+"="+newval;
-
-           $.ajax({
-               type: 'POST',
-               url: "php/update/updateComp.php",
-               data : result ,
-               success: function() {
-                   console.log(result);
-               },
-
-           })
-
-       });
-        });
-
-
-    });
-    $('#uAdm').click(function () {
-        $.ajax({
-            type: 'POST',
-            url: "php/update/updateAdm.php",
-            success: function() {
-                console.log("test ok ");
-            },
-
-        })
-    });
-    $('#uDate').click(function () {
-        var values = $(this).serialize();
-        $.ajax({
-            type: 'POST',
-            url: "php/update/updateDate.php",
-            data : values,
-            success: function() {
-                console.log("test ok ");
-            },
-
-        })
-    });
-    $('#udetA').click(function () {
-        $.ajax({
-            type: 'POST',
-            url: "php/update/updatedetA.php",
-            success: function() {
-                console.log("test ok ");
-            },
-
-        })
-    });
-    $('#udetP').click(function () {
-        $.ajax({
-            type: 'POST',
-            url: "php/update/updatedetP.php",
-            success: function() {
-                console.log("test ok ");
-            },
-
-        })
-    });
-    $('#uLoc').click(function () {
-        $.ajax({
-            type: 'POST',
-            url: "php/update/updateLoc.php",
-            success: function() {
-                console.log("test ok ");
-            },
-
-        })
-    });
 
 
     // RECUP la val des bouttons une fois fait ca sera bons

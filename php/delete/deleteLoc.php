@@ -1,23 +1,4 @@
 <?php
-
-if(isset($_POST['valmodif'])){
-    $select1 = $_POST['valmodif'];
-    $amodifier=0;
-    switch ($select1) {
-        case 'nom_ville':
-            $amodifier='nom_ville';
-            break;
-        case 'lat':
-            $amodifier='latlambert93';
-            break;
-        case 'long':
-            $amodifier='longlambert93';
-            break;
-
-    }
-
-}
-
 if(isset($_POST['newval'])){
     $select2 = $_POST['newval'];
     $new=0;
@@ -35,7 +16,6 @@ if(isset($_POST['newval'])){
 
 }
 
-$valuechercher=$_POST['valuemodif'];
 $newvalue=$_POST['newvalue'];
 
 $conn_string = "host=localhost port=5432 dbname=projet user=administrateur  password=admin";
@@ -43,9 +23,9 @@ $conn_string = "host=localhost port=5432 dbname=projet user=administrateur  pass
 if($connect = pg_connect($conn_string)){
 
 }
-$requete="UPDATE localisation SET $new='$newvalue' WHERE $amodifier='$valuechercher';";
+$requete="DELETE FROM localisation WHERE $new='$newvalue' ;";
 
-
+echo $requete;
 if (pg_query($connect,$requete))
     echo "saved";
 else
@@ -56,5 +36,4 @@ if (!pg_close($connect)) {
 }
 
 
-header('Location: ../../main.php');
-?>
+//header('Location: ../../main.php');

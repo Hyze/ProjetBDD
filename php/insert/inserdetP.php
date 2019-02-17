@@ -2,7 +2,7 @@
 
 
 
-if (! $_POST['description']) {
+if (!$_POST['description']) {
 
     $des = 'null';
 

@@ -1,50 +1,5 @@
 <?php
 
-if(isset($_POST['valmodif'])){
-    $select1 = $_POST['valmodif'];
-    $amodifier=0;
-    switch ($select1) {
-        case 'date':
-
-            $amodifier='date';
-            break;
-        case 'article':
-            $amodifier='article';
-            break;
-        case 'reference_cindoc':
-            $amodifier='reference_cindoc';
-            break;
-        case 'serie':
-            $amodifier='serie';
-            break;
-        case 'nom_ville':
-            $amodifier='nom_ville';
-            break;
-        case 'sujet':
-            $amodifier='sujet';
-            break;
-        case 'description':
-            $amodifier='description';
-            break;
-        case 'index_personne':
-            $amodifier = 'index_personnne';
-            break;
-        case 'nb_cliche':
-            $amodifier='nb_cliche';
-            break;
-        case 'negatif_reversible':
-            $amodifier = 'negatif_reversible';
-            break;
-        case 'couleur_noirblanc':
-            $amodifier='couleur_noirblanc';
-            break;
-        case'discriminant':
-            $amodifier='discriminant';
-            break;
-    }
-
-}
-
 if(isset($_POST['newval'])){
     $select2 = $_POST['newval'];
     $new=0;
@@ -91,7 +46,7 @@ if(isset($_POST['newval'])){
 
 }
 
-$valuechercher=$_POST['valuemodif'];
+
 $newvalue=$_POST['newvalue'];
 
 $conn_string = "host=localhost port=5432 dbname=projet user=administrateur  password=admin";
@@ -99,12 +54,12 @@ $conn_string = "host=localhost port=5432 dbname=projet user=administrateur  pass
 if($connect = pg_connect($conn_string)){
     echo 'connect done';
 }
-$requete="UPDATE acompleter SET $new='$newvalue' WHERE $amodifier='$valuechercher';";
+$requete="DELETE FROM acompleter WHERE $new='$newvalue';";
 
 echo $requete;
 
 if (pg_query($connect,$requete))
-    echo "saved";
+    echo "delete";
 else
     echo "error insering data";
 
@@ -113,6 +68,6 @@ if (!pg_close($connect)) {
     echo "Failed to close connection to " . pg_host($connect) . ": " .
         pg_last_error($connect) . "<br/>\n";
 }
-header('Location: ../../main.php');
+//header('Location: ../../main.php');
 
 ?>
