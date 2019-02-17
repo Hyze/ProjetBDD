@@ -1,0 +1,1301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="projet@localhost">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.14">
+    <root id="1">
+      <ServerVersion>11.1</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="TP2">
+      <ObjectId>100459</ObjectId>
+      <StateNumber>1600</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="3" parent="1" name="TP5">
+      <ObjectId>32805</ObjectId>
+      <StateNumber>631</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="4" parent="1" name="postgres">
+      <ObjectId>13135</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <StateNumber>566</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>518</IntrospectionStateNumber>
+    </database>
+    <database id="5" parent="1" name="projet">
+      <ObjectId>16402</ObjectId>
+      <StateNumber>572</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>518</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <role id="6" parent="1" name="Omer">
+      <ObjectId>32861</ObjectId>
+      <Inherit>1</Inherit>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="7" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="8" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="9" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="10" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="pg_read_server_files">
+      <ObjectId>4569</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="12" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="13" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="14" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="15" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="16" parent="5" name="information_schema">
+      <ObjectId>12840</ObjectId>
+      <StateNumber>365</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="17" parent="5" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <StateNumber>358</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="18" parent="5" name="pg_temp_1">
+      <ObjectId>11804</ObjectId>
+      <StateNumber>120</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="19" parent="5" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <StateNumber>1</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="20" parent="5" name="pg_toast_temp_1">
+      <ObjectId>11805</ObjectId>
+      <StateNumber>120</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="21" parent="5" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <StateNumber>359</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionTimestamp>2019-01-26.19:42:33.151</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1550</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="22" parent="5" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="23" parent="5" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="24" parent="5" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="25" parent="5" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="26" parent="5" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="27" parent="5" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <extension id="28" parent="5" name="plpgsql">
+      <ObjectId>13121</ObjectId>
+      <Comment>PL/pgSQL procedural language</Comment>
+      <StateNumber>518</StateNumber>
+      <Version>1.0</Version>
+      <SchemaName>pg_catalog</SchemaName>
+      <SchemaId>11</SchemaId>
+    </extension>
+    <sequence id="29" parent="21" name="seq1">
+      <ObjectId>83967</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1550</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="30" parent="21" name="seq2">
+      <ObjectId>83969</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1550</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="31" parent="21" name="seq3">
+      <ObjectId>83062</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1417</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="32" parent="21" name="seq_date">
+      <ObjectId>83965</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1550</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="33" parent="21" name="seq_deta">
+      <ObjectId>83961</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1550</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="34" parent="21" name="villeid">
+      <ObjectId>83963</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1550</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <table id="35" parent="21" name="acompleter">
+      <ObjectId>84019</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1550</StateNumber>
+    </table>
+    <table id="36" parent="21" name="administratif">
+      <ObjectId>84003</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1550</StateNumber>
+    </table>
+    <table id="37" parent="21" name="date">
+      <ObjectId>83987</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1550</StateNumber>
+    </table>
+    <table id="38" parent="21" name="detail_artistique">
+      <ObjectId>83995</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1550</StateNumber>
+    </table>
+    <table id="39" parent="21" name="detail_photo">
+      <ObjectId>84011</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1550</StateNumber>
+    </table>
+    <table id="40" parent="21" name="info">
+      <ObjectId>83971</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1550</StateNumber>
+    </table>
+    <table id="41" parent="21" name="localisation">
+      <ObjectId>83977</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1550</StateNumber>
+    </table>
+    <routine id="42" parent="21" name="articlebis">
+      <ObjectId>75425</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>143</SourceTextLength>
+      <StateNumber>1550</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="43" parent="21" name="bis">
+      <ObjectId>77494</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>313</SourceTextLength>
+      <StateNumber>1180</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>void</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="44" parent="21" name="decoupe">
+      <ObjectId>24619</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>299</SourceTextLength>
+      <StateNumber>709</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>a character varying</ArgumentsDefinition>
+      <ResultsDefinition>text</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="45" parent="21" name="decoupesujet">
+      <ObjectId>57867</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>1267</SourceTextLength>
+      <StateNumber>1550</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>void</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="46" parent="21" name="decoupeville">
+      <ObjectId>57400</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>435</SourceTextLength>
+      <StateNumber>1550</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>void</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="47" parent="21" name="inser">
+      <ObjectId>57399</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>164</SourceTextLength>
+      <StateNumber>1550</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>ville character varying</ArgumentsDefinition>
+      <ResultsDefinition>void</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="48" parent="21" name="inser3">
+      <ObjectId>75421</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>95</SourceTextLength>
+      <StateNumber>1550</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>void</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="49" parent="21" name="inseracompleter">
+      <ObjectId>83568</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>266</SourceTextLength>
+      <StateNumber>1550</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>date text, article text, reference text, serie text, nom_ville text, sujet text, description text, index_personne text, nb_cliche text, negatif text, couleur text, discriminant text</ArgumentsDefinition>
+      <ResultsDefinition>void</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="50" parent="21" name="inseradmi">
+      <ObjectId>75428</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>90</SourceTextLength>
+      <StateNumber>1550</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>serie text, reference_cindoc text, article text, discriminant text</ArgumentsDefinition>
+      <ResultsDefinition>void</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="51" parent="21" name="inserart">
+      <ObjectId>75424</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>99</SourceTextLength>
+      <StateNumber>1550</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>nb text, neg text, coul text, remarque text, taille text</ArgumentsDefinition>
+      <ResultsDefinition>void</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="52" parent="21" name="inserdate">
+      <ObjectId>75420</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>690</SourceTextLength>
+      <StateNumber>1550</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>val character varying</ArgumentsDefinition>
+      <ResultsDefinition>void</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="53" parent="21" name="inserdet">
+      <ObjectId>82899</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>386</SourceTextLength>
+      <StateNumber>1324</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>datee integer, ville text, art text, sujet text, description text, notebasdepage text, index_personne text, fichier_num text, index_iconogrphique text</ArgumentsDefinition>
+      <ResultsDefinition>void</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="54" parent="21" name="inserdet">
+      <ObjectId>82919</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>508</SourceTextLength>
+      <StateNumber>1394</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>datee integer, ville text, art text, sujet text, description text, notebasdepage text, index_personne text, fichier_num text, index_iconogrphique text, photo integer</ArgumentsDefinition>
+      <ResultsDefinition>void</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="55" parent="21" name="inserdet">
+      <ObjectId>75966</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>311</SourceTextLength>
+      <StateNumber>1550</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>discriminant text, ville text, art text, sujet text, description text, notebasdepage text, index_personne text, fichier_num text, index_iconogrphique text</ArgumentsDefinition>
+      <ResultsDefinition>void</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="56" parent="21" name="inserdet">
+      <ObjectId>77496</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>328</SourceTextLength>
+      <StateNumber>1187</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>discriminant text, ville text, art text, sujet text, description text, notebasdepage text, index_personne text, fichier_num text, index_iconogrphique text, datee text</ArgumentsDefinition>
+      <ResultsDefinition>void</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="57" parent="21" name="insertville">
+      <ObjectId>41079</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>217</SourceTextLength>
+      <StateNumber>691</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>ville character varying</ArgumentsDefinition>
+      <ResultsDefinition>void</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="58" parent="21" name="nettoiesujet">
+      <ObjectId>24614</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>260</SourceTextLength>
+      <StateNumber>627</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>void</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="59" parent="21" name="nettoieville">
+      <ObjectId>40997</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>273</SourceTextLength>
+      <StateNumber>709</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>void</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="60" parent="21" name="onisert">
+      <ObjectId>82267</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>512</SourceTextLength>
+      <StateNumber>1550</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <column id="61" parent="35" name="date">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <DefaultExpression>&apos;Acompleter&apos;::text</DefaultExpression>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="62" parent="35" name="article">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="63" parent="35" name="reference_cindoc">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <DefaultExpression>&apos;Acompleter&apos;::text</DefaultExpression>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="64" parent="35" name="serie">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <DefaultExpression>&apos;Acompleter&apos;::text</DefaultExpression>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="65" parent="35" name="nom_ville">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <DefaultExpression>&apos;Acompleter&apos;::text</DefaultExpression>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="66" parent="35" name="sujet">
+      <Position>6</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <DefaultExpression>&apos;Acompleter&apos;::text</DefaultExpression>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="67" parent="35" name="description">
+      <Position>7</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <DefaultExpression>&apos;Acompleter&apos;::text</DefaultExpression>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="68" parent="35" name="index_personne">
+      <Position>8</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <DefaultExpression>&apos;Acompleter&apos;::text</DefaultExpression>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="69" parent="35" name="nb_cliche">
+      <Position>9</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <DefaultExpression>&apos;Acompleter&apos;::text</DefaultExpression>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="70" parent="35" name="negatif_reversible">
+      <Position>10</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <DefaultExpression>&apos;Acompleter&apos;::text</DefaultExpression>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="71" parent="35" name="couleur_noirblanc">
+      <Position>11</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <DefaultExpression>&apos;Acompleter&apos;::text</DefaultExpression>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="72" parent="35" name="discriminant">
+      <Position>12</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="73" parent="36" name="serie">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="74" parent="36" name="reference_cindoc">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="75" parent="36" name="article">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="76" parent="36" name="discriminant">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="77" parent="36" name="administratif_pkey">
+      <ObjectId>84009</ObjectId>
+      <StateNumber>1550</StateNumber>
+      <ColNames>article</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="78" parent="36" name="administratif_pkey">
+      <ObjectId>84010</ObjectId>
+      <StateNumber>1550</StateNumber>
+      <ColNames>article</ColNames>
+      <UnderlyingIndexName>administratif_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="79" parent="37" name="id_date">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1550</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="80" parent="37" name="jour">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="81" parent="37" name="mois">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="82" parent="37" name="annee">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="83" parent="37" name="date_pkey">
+      <ObjectId>83993</ObjectId>
+      <StateNumber>1550</StateNumber>
+      <ColNames>id_date</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="84" parent="37" name="date_pkey">
+      <ObjectId>83994</ObjectId>
+      <StateNumber>1550</StateNumber>
+      <ColNames>id_date</ColNames>
+      <UnderlyingIndexName>date_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="85" parent="38" name="id_photo">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1550</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="86" parent="38" name="nb_cliche">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="87" parent="38" name="negatif_reversible">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="88" parent="38" name="couleur_noirblanc">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="89" parent="38" name="remarque">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="90" parent="38" name="taille_cliche">
+      <Position>6</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="91" parent="38" name="detail_artistique_pkey">
+      <ObjectId>84001</ObjectId>
+      <StateNumber>1550</StateNumber>
+      <ColNames>id_photo</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="92" parent="38" name="detail_artistique_pkey">
+      <ObjectId>84002</ObjectId>
+      <StateNumber>1550</StateNumber>
+      <ColNames>id_photo</ColNames>
+      <UnderlyingIndexName>detail_artistique_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="93" parent="39" name="id_photo">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1550</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="94" parent="39" name="id_ville">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="95" parent="39" name="id_date">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1550</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="96" parent="39" name="article">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="97" parent="39" name="description">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="98" parent="39" name="sujet">
+      <Position>6</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="99" parent="39" name="notebasdepage">
+      <Position>7</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="100" parent="39" name="index_personne">
+      <Position>8</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="101" parent="39" name="fichier_numerique">
+      <Position>9</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="102" parent="39" name="fichier_iconographique">
+      <Position>10</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="103" parent="39" name="detail_photo_pkey">
+      <ObjectId>84017</ObjectId>
+      <StateNumber>1550</StateNumber>
+      <ColNames>id_photo
+article
+id_date</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="104" parent="39" name="detail_photo_pkey">
+      <ObjectId>84018</ObjectId>
+      <StateNumber>1550</StateNumber>
+      <ColNames>id_photo
+article
+id_date</ColNames>
+      <UnderlyingIndexName>detail_photo_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="105" parent="39" name="detail_photo_id_photo_fkey">
+      <ObjectId>84035</ObjectId>
+      <StateNumber>1550</StateNumber>
+      <ColNames>id_photo</ColNames>
+      <RefTableId>83995</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>detail_artistique</RefTableName>
+      <RefKeyName>detail_artistique_pkey</RefKeyName>
+      <RefColNames>id_photo</RefColNames>
+    </foreign-key>
+    <foreign-key id="106" parent="39" name="detail_photo_id_ville_fkey">
+      <ObjectId>84040</ObjectId>
+      <StateNumber>1550</StateNumber>
+      <ColNames>id_ville</ColNames>
+      <RefTableId>83977</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>localisation</RefTableName>
+      <RefKeyName>localisation_pkey</RefKeyName>
+      <RefColNames>id_ville</RefColNames>
+    </foreign-key>
+    <foreign-key id="107" parent="39" name="detail_photo_id_date_fkey">
+      <ObjectId>84045</ObjectId>
+      <StateNumber>1550</StateNumber>
+      <ColNames>id_date</ColNames>
+      <RefTableId>83987</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>date</RefTableName>
+      <RefKeyName>date_pkey</RefKeyName>
+      <RefColNames>id_date</RefColNames>
+    </foreign-key>
+    <foreign-key id="108" parent="39" name="detail_photo_article_fkey">
+      <ObjectId>84050</ObjectId>
+      <StateNumber>1550</StateNumber>
+      <ColNames>article</ColNames>
+      <RefTableId>84003</RefTableId>
+      <RefColPositions>3</RefColPositions>
+      <RefTableName>administratif</RefTableName>
+      <RefKeyName>administratif_pkey</RefKeyName>
+      <RefColNames>article</RefColNames>
+    </foreign-key>
+    <column id="109" parent="40" name="reference_cindoc">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="110" parent="40" name="serie">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="111" parent="40" name="article">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="112" parent="40" name="discriminant">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="113" parent="40" name="ville">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="114" parent="40" name="sujet">
+      <Position>6</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="115" parent="40" name="description_detaillee">
+      <Position>7</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="116" parent="40" name="date">
+      <Position>8</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="117" parent="40" name="notes_de_bas_de_page">
+      <Position>9</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="118" parent="40" name="index_personnes">
+      <Position>10</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="119" parent="40" name="fichier_numerique">
+      <Position>11</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="120" parent="40" name="index_iconographique">
+      <Position>12</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="121" parent="40" name="nombre_de_cliches">
+      <Position>13</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="122" parent="40" name="taille_du_cliche">
+      <Position>14</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="123" parent="40" name="negatif_ou_inversible">
+      <Position>15</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="124" parent="40" name="couleur_ou_noir_et_blanc">
+      <Position>16</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="125" parent="40" name="remarques">
+      <Position>17</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <trigger id="126" parent="40" name="unarticlebis">
+      <ObjectId>84055</ObjectId>
+      <StateNumber>1550</StateNumber>
+      <Turn>before-row</Turn>
+      <Events>IU</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>75425</CallRoutineId>
+    </trigger>
+    <column id="127" parent="41" name="id_ville">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1550</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="128" parent="41" name="nom_ville">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="129" parent="41" name="latlambert93">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="130" parent="41" name="longlambert93">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1550</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="131" parent="41" name="localisation_pkey">
+      <ObjectId>83985</ObjectId>
+      <StateNumber>1550</StateNumber>
+      <ColNames>id_ville</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="132" parent="41" name="localisation_pkey">
+      <ObjectId>83986</ObjectId>
+      <StateNumber>1550</StateNumber>
+      <ColNames>id_ville</ColNames>
+      <UnderlyingIndexName>localisation_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <trigger id="133" parent="41" name="insertvillelambert">
+      <ObjectId>84056</ObjectId>
+      <StateNumber>1550</StateNumber>
+      <Turn>before-row</Turn>
+      <Events>I</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>82267</CallRoutineId>
+    </trigger>
+    <argument id="134" parent="42">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0s</DataType>
+    </argument>
+    <argument id="135" parent="43">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0s</DataType>
+    </argument>
+    <argument id="136" parent="44" name="a">
+      <Position>1</Position>
+      <DataType>varchar|0s</DataType>
+    </argument>
+    <argument id="137" parent="44">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="138" parent="45">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0s</DataType>
+    </argument>
+    <argument id="139" parent="46">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0s</DataType>
+    </argument>
+    <argument id="140" parent="47" name="ville">
+      <Position>1</Position>
+      <DataType>varchar|0s</DataType>
+    </argument>
+    <argument id="141" parent="47">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0s</DataType>
+    </argument>
+    <argument id="142" parent="48">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0s</DataType>
+    </argument>
+    <argument id="143" parent="49" name="date">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="144" parent="49" name="article">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="145" parent="49" name="reference">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="146" parent="49" name="serie">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="147" parent="49" name="nom_ville">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="148" parent="49" name="sujet">
+      <Position>6</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="149" parent="49" name="description">
+      <Position>7</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="150" parent="49" name="index_personne">
+      <Position>8</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="151" parent="49" name="nb_cliche">
+      <Position>9</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="152" parent="49" name="negatif">
+      <Position>10</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="153" parent="49" name="couleur">
+      <Position>11</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="154" parent="49" name="discriminant">
+      <Position>12</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="155" parent="49">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0s</DataType>
+    </argument>
+    <argument id="156" parent="50" name="serie">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="157" parent="50" name="reference_cindoc">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="158" parent="50" name="article">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="159" parent="50" name="discriminant">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="160" parent="50">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0s</DataType>
+    </argument>
+    <argument id="161" parent="51" name="nb">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="162" parent="51" name="neg">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="163" parent="51" name="coul">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="164" parent="51" name="remarque">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="165" parent="51" name="taille">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="166" parent="51">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0s</DataType>
+    </argument>
+    <argument id="167" parent="52" name="val">
+      <Position>1</Position>
+      <DataType>varchar|0s</DataType>
+    </argument>
+    <argument id="168" parent="52">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0s</DataType>
+    </argument>
+    <argument id="169" parent="53" name="datee">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </argument>
+    <argument id="170" parent="53" name="ville">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="171" parent="53" name="art">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="172" parent="53" name="sujet">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="173" parent="53" name="description">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="174" parent="53" name="notebasdepage">
+      <Position>6</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="175" parent="53" name="index_personne">
+      <Position>7</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="176" parent="53" name="fichier_num">
+      <Position>8</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="177" parent="53" name="index_iconogrphique">
+      <Position>9</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="178" parent="53">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0s</DataType>
+    </argument>
+    <argument id="179" parent="54" name="datee">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </argument>
+    <argument id="180" parent="54" name="ville">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="181" parent="54" name="art">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="182" parent="54" name="sujet">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="183" parent="54" name="description">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="184" parent="54" name="notebasdepage">
+      <Position>6</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="185" parent="54" name="index_personne">
+      <Position>7</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="186" parent="54" name="fichier_num">
+      <Position>8</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="187" parent="54" name="index_iconogrphique">
+      <Position>9</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="188" parent="54" name="photo">
+      <Position>10</Position>
+      <DataType>integer|0s</DataType>
+    </argument>
+    <argument id="189" parent="54">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0s</DataType>
+    </argument>
+    <argument id="190" parent="55" name="discriminant">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="191" parent="55" name="ville">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="192" parent="55" name="art">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="193" parent="55" name="sujet">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="194" parent="55" name="description">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="195" parent="55" name="notebasdepage">
+      <Position>6</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="196" parent="55" name="index_personne">
+      <Position>7</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="197" parent="55" name="fichier_num">
+      <Position>8</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="198" parent="55" name="index_iconogrphique">
+      <Position>9</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="199" parent="55">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0s</DataType>
+    </argument>
+    <argument id="200" parent="56" name="discriminant">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="201" parent="56" name="ville">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="202" parent="56" name="art">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="203" parent="56" name="sujet">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="204" parent="56" name="description">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="205" parent="56" name="notebasdepage">
+      <Position>6</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="206" parent="56" name="index_personne">
+      <Position>7</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="207" parent="56" name="fichier_num">
+      <Position>8</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="208" parent="56" name="index_iconogrphique">
+      <Position>9</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="209" parent="56" name="datee">
+      <Position>10</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="210" parent="56">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0s</DataType>
+    </argument>
+    <argument id="211" parent="57" name="ville">
+      <Position>1</Position>
+      <DataType>varchar|0s</DataType>
+    </argument>
+    <argument id="212" parent="57">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0s</DataType>
+    </argument>
+    <argument id="213" parent="58">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0s</DataType>
+    </argument>
+    <argument id="214" parent="59">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0s</DataType>
+    </argument>
+    <argument id="215" parent="60">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0s</DataType>
+    </argument>
+  </database-model>
+</dataSource>

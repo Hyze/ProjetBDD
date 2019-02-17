@@ -395,7 +395,10 @@ $(document).ready(function() {
       '<th>Nombre de cliche</th>' +
       '<th>Negatif / Inversible</th>' +
       '  <th>Couleur / Noir et Blanc</th>' +
+<<<<<<< HEAD
         '<th>Index personne</th>'+
+=======
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
       '  <th>Discriminants</th>' +
       '</tr>' +
       '  </thead>';
@@ -404,7 +407,11 @@ $(document).ready(function() {
 
     for (var i = 0; i < data.length; i++) {
 
+<<<<<<< HEAD
       var content = content + '<tr> <td>' + data[i].date + '</td>' + '<td>' + data[i].article + '</td>' + '<td>' + data[i].reference_cindoc + '</td>' + '<td>' + data[i].serie + '</td>' + '<td>' + data[i].nom_ville + '</td>' + '<td>' + data[i].sujet + '</td>' + '<td>' + data[i].description + '</td>' + '<td>' + data[i].nb_cliche + '</td>' + '<td>' + data[i].negatif_reversible + '</td>' + '<td>' + data[i].couleur_noirblanc + '</td>' +'<td>'+ data[i].index_personne+'</td>' +'<td>' + data[i].discriminant + '</td> </tr>'
+=======
+      var content = content + '<tr> <td>' + data[i].date + '</td>' + '<td>' + data[i].article + '</td>' + '<td>' + data[i].reference_cindoc + '</td>' + '<td>' + data[i].serie + '</td>' + '<td>' + data[i].nom_ville + '</td>' + '<td>' + data[i].sujet + '</td>' + '<td>' + data[i].description + '</td>' + '<td>' + data[i].nb_cliche + '</td>' + '<td>' + data[i].negatif_reversible + '</td>' + '<td>' + data[i].couleur_noirblanc + '</td>' + '<td>' + data[i].discriminant + '</td> </tr>'
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
 
     }
     var table = tab + bodystart + content + tbodyfin;

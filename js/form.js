@@ -7,6 +7,7 @@ $(document).ready(function() {
     $('#deta').hide();
     $('#detp').hide();
     $('#locF').hide();
+<<<<<<< HEAD
     $('#comp').hide()
     $('#updateComp').hide();
     $('#updateDate').hide();
@@ -14,6 +15,9 @@ $(document).ready(function() {
     $('#updatedetA').hide();
     $('#updatedetP').hide();
     $('#updateLoc').hide();
+=======
+    $('#comp').hide();
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
 
     $('#b1F').click(function() {
       $('#adm').hide();
@@ -22,12 +26,15 @@ $(document).ready(function() {
       $('#detp').hide();
       $('#locF').hide();
       $('#comp').show();
+<<<<<<< HEAD
       $('#updateComp').show();
       $('#updateDate').hide();
       $('#updateAdm').hide();
       $('#updatedetA').hide();
       $('#updatedetP').hide();
       $('#updateLoc').hide();
+=======
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
 
 
 
@@ -39,12 +46,16 @@ $(document).ready(function() {
       $('#detp').hide();
       $('#locF').hide();
       $('#comp').hide();
+<<<<<<< HEAD
       $('#updateComp').hide();
       $('#updateDate').hide();
       $('#updateAdm').show();
       $('#updatedetA').hide();
       $('#updatedetP').hide();
       $('#updateLoc').hide();
+=======
+
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
 
     });
 
@@ -55,6 +66,7 @@ $(document).ready(function() {
       $('#detp').hide();
       $('#locF').hide();
       $('#comp').hide();
+<<<<<<< HEAD
       $('#updateComp').hide();
       $('#updateDate').show();
       $('#updateAdm').hide();
@@ -62,6 +74,8 @@ $(document).ready(function() {
       $('#updatedetP').hide();
       $('#updateLoc').hide();
 
+=======
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
 
     });
 
@@ -73,12 +87,25 @@ $(document).ready(function() {
       $('#detp').hide();
       $('#locF').hide();
       $('#comp').hide();
+<<<<<<< HEAD
       $('#updateComp').hide();
       $('#updateDate').hide();
       $('#updateAdm').hide();
       $('#updatedetA').show();
       $('#updatedetP').hide();
       $('#updateLoc').hide();
+=======
+
+    });
+    $('#b4F').click(function() {
+      $('#adm').hide();
+      $('#date1').hide();
+      $('#deta').show();
+      $('#detp').hide();
+      $('#locF').hide();
+      $('#comp').hide();
+
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
     });
     $('#b5F').click(function() {
       $('#adm').hide();
@@ -87,12 +114,16 @@ $(document).ready(function() {
       $('#detp').show();
       $('#locF').hide();
       $('#comp').hide();
+<<<<<<< HEAD
       $('#updateComp').hide();
       $('#updateDate').hide();
       $('#updateAdm').hide();
       $('#updatedetA').hide();
       $('#updatedetP').show();
       $('#updateLoc').hide();
+=======
+
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
     });
     $('#b6F').click(function() {
       $('#adm').hide();
@@ -101,12 +132,15 @@ $(document).ready(function() {
       $('#detp').hide();
       $('#locF').show();
       $('#comp').hide();
+<<<<<<< HEAD
       $('#updateComp').hide();
       $('#updateDate').hide();
       $('#updateAdm').hide();
       $('#updatedetA').hide();
       $('#updatedetP').hide();
       $('#updateLoc').show();
+=======
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
 
     });
 
@@ -118,6 +152,7 @@ $(document).ready(function() {
 
 
   $("#option1").click(function() {
+<<<<<<< HEAD
 
     $('#update').hide();
     $('#insert').show();
@@ -259,6 +294,16 @@ $(document).ready(function() {
     })
   });
 
+=======
+    console.log("stylesheet");
+    $("#acomp").attr('action', 'php/inserComp.php')
+  });
+
+  $("#option2").click(function() {
+    console.log('tests');
+    $("#acomp").attr('action', 'php/updateComp.php')
+  });
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
 
   // RECUP la val des bouttons une fois fait ca sera bons
 

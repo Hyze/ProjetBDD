@@ -13,7 +13,11 @@ else {
 }
 ?>
 
+<<<<<<< HEAD
 
+=======
+<html>
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
 
 <head>
   <meta charset="utf-8">
@@ -51,7 +55,11 @@ else {
         <?php
 if($_SESSION['login'] == 'admin'){
 
+<<<<<<< HEAD
   echo "<li> <a href=\"#pageSubmenu\" id=\"modif2\" data-toggle=\"collapse\" aria-expanded=\"false\">Modifier les données</a>  </li>" ;
+=======
+  echo "<li> <a href=\"#pageSubmenu\" data-toggle=\"collapse\" aria-expanded=\"false\">Modifier les données</a>  </li>" ;
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
 }
 
 
@@ -90,7 +98,11 @@ if($_SESSION['login']=='user'){
               <?php
               if($_SESSION['login'] == 'admin'){
 
+<<<<<<< HEAD
                 echo "  <li class=\"nav-item\"><a class=\"nav-link\" id=\"modif1\" href=\"#top\">Modifier les données</a></li>" ;
+=======
+                echo "  <li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">Modifier les données</a></li>" ;
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
               }
 
 
@@ -257,6 +269,7 @@ if($_SESSION['login']=='user'){
         </div>
         <hr />
         <div class="card text-center">
+<<<<<<< HEAD
             <div class="card-header">
             <ul class="nav nav-tabs card-header-tabs">
                 <li class="nav-item" id="add">
@@ -267,6 +280,20 @@ if($_SESSION['login']=='user'){
                 </li>
             </ul>
             </div>
+=======
+
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked>Inserer
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="option2" autocomplete="off"> Mettre a jour
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="option3" autocomplete="off"> Supprimer
+            </label>
+          </div>
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
           <div class="card-header">
             <ul class="nav nav-tabs card-header-tabs">
               <li class="nav-item" id="add">
@@ -293,10 +320,17 @@ if($_SESSION['login']=='user'){
           </ul>
         </div>
 
+<<<<<<< HEAD
         <div class="card-body">
             <div id="insert">
           <div id="comp">
             <form id="acomp"    >
+=======
+
+        <div class="card-body">
+          <div id="comp">
+            <form id="acomp" action="php/inserComp.php" method="post">
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
               <div class="form-row">
                 <div class="col">
                   <label>Date</label>
@@ -341,11 +375,19 @@ if($_SESSION['login']=='user'){
               </div>
 
 
+<<<<<<< HEAD
               <button type="button" class="btn btn-primary" id="inserComp">Envoyer</button>
             </form >
           </div>
           <div id="adm">
             <form >
+=======
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+          </div>
+          <div id="adm">
+            <form>
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
               <div class="form-row">
                 <div class="col">
                   <label>Serie</label>
@@ -366,14 +408,22 @@ if($_SESSION['login']=='user'){
               </div>
 
 
+<<<<<<< HEAD
           <button type="button" class="btn btn-primary" id="inserAdm">Envoyer</button>
+=======
+          <button type="submit" class="btn btn-primary">Envoyer</button>
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
           </form>
 
         </div>
 
 
         <div id="date1">
+<<<<<<< HEAD
           <form >
+=======
+          <form>
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
             <div class="form-row">
               <div class="col">
                 <label>Annee</label>
@@ -388,13 +438,21 @@ if($_SESSION['login']=='user'){
                 <input type="text" class="form-control" name="jour">
               </div>
         </div>
+<<<<<<< HEAD
         <button type="button" class="btn btn-primary" id="inserDate">Envoyer</button>
+=======
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
         </form>
 
         </div>
 
         <div id="deta">
+<<<<<<< HEAD
           <form >
+=======
+          <form>
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
             <div class="form-row">
               <div class="col">
                 <label>Remarque </label>
@@ -420,13 +478,21 @@ if($_SESSION['login']=='user'){
               <input type="text" class="form-control" name="taille_cliche">
             </div>
       </div>
+<<<<<<< HEAD
         <button type="button" class="btn btn-primary" id="inserdetA">Envoyer</button>
+=======
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
         </form>
         </div>
 
 
         <div id="detp">
+<<<<<<< HEAD
           <form >
+=======
+          <form>
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
             <div class="form-row">
               <div class="col">
                 <label>Article</label>
@@ -460,13 +526,21 @@ if($_SESSION['login']=='user'){
               <input type="text" class="form-control" name="index_personne">
             </div>
       </div>
+<<<<<<< HEAD
         <button type="button" class="btn btn-primary" id="inserdetP">Envoyer</button>
+=======
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
         </form>
 
         </div>
 
         <div id="locF">
+<<<<<<< HEAD
           <form >
+=======
+          <form>
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
             <div class="form-row">
               <div class="col">
                 <label>Ville</label>
@@ -481,6 +555,7 @@ if($_SESSION['login']=='user'){
                 <input type="text" class="form-control" name="long">
               </div>
         </div>
+<<<<<<< HEAD
         <button type="button" class="btn btn-primary" id="inserLoc">envoyer</button>
         </form>
 
@@ -788,6 +863,15 @@ if($_SESSION['login']=='user'){
     </div>
 
 </div> <!--update part -->
+=======
+        <button type="submit" class="btn btn-primary">envoyer</button>
+        </form>
+
+        </div>
+
+
+
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
 
 
 

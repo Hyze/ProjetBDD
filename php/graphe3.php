@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 $conn_string = "host=localhost port=5432 dbname=projet user=utilisateur password=user";
+=======
+$conn_string = "host=localhost port=5432 dbname=projet user=postgres password=root";
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
 $connect = pg_connect($conn_string);
 
  $donneeIncomplete = "SELECT count(*) from acompleter";

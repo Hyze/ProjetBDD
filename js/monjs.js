@@ -9,7 +9,10 @@ $(document).ready(function() {
     });
 
   $('#visualisation').hide();
+<<<<<<< HEAD
   $('#modif').hide();
+=======
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
 
   $("#stat").click(function() {
     $('#visualisation').hide();
@@ -24,12 +27,16 @@ $(document).ready(function() {
   $("#stat1").click(function() {
     $('#visualisation').hide();
     $('#Home').show();
+<<<<<<< HEAD
     $('#modif').hide();
+=======
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
   });
 
   $("#visu1").click(function() {
     $('#Home').hide();
     $('#visualisation').show();
+<<<<<<< HEAD
     $('#modif').hide();
   });
 
@@ -47,6 +54,10 @@ $(document).ready(function() {
 
 
 
+=======
+  });
+
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
   function graphe1_construct(data) {
     var pie = document.getElementById('Pie')
       .getContext('2d');

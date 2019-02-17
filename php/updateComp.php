@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 if (! $_POST['date']) {
 
    $date = 'null';
@@ -105,3 +106,13 @@ if (!pg_close($connect)) {
 
 
 
+=======
+
+if (isset($_POST['date']) && isset($_POST['reference_cindoc'])) {
+  echo "update var ok !";
+  echo $_POST['date'];
+
+}
+
+ ?>
+>>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
