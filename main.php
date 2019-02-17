@@ -812,7 +812,7 @@ else {
                         </select>
                     </div>
                     <div class="col-auto my-1">
-                        <label>Valeur a modifier</label>
+                        <label>Valeur a supprimer   </label>
                         <input type="text" class="form-control" name="newvalue">
                     </div>
 
@@ -854,7 +854,7 @@ else {
                     <form action="php/delete/deleteDate.php" method="post">
                     <div class="form-row ">
                         <div class="col-auto my-1">
-                            <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs a modifier</label>
+                            <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs </label>
                             <select name="newval"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                                 <option selected>Choose...</option>
                                 <option value="jour">Jour</option>
@@ -863,7 +863,7 @@ else {
                             </select>
                         </div>
                         <div class="col-auto my-1">
-                            <label>Nouvelle valeur</label>
+                            <label>Valeur a supprimer</label>
                             <input type="text" class="form-control" name="newvalue">
                         </div>
 
@@ -880,7 +880,7 @@ else {
                 <form action="php/delete/deldetA.php" method="post">
                     <div class="form-row ">
                         <div class="col-auto my-1">
-                            <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs a modifier</label>
+                            <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs</label>
                             <select name="newval"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                                 <option selected>Choose...</option>
                                 <option value="remarque">Remarque</option>
@@ -892,13 +892,13 @@ else {
                             </select>
                         </div>
                         <div class="col-auto my-1">
-                            <label>Nouvelle valeur</label>
+                            <label>Valeur a supprimer</label>
                             <input type="text" class="form-control" name="newvalue">
                         </div>
 
                     </div>
                     <div class="col-auto my-1">
-                        <button type="submit" class="btn btn-primary" id="udetA">Submit</button>
+                        <button type="submit" class="btn btn-primary" >Submit</button>
                     </div>
                 </form>
 
@@ -912,7 +912,7 @@ else {
 
                     <div class="form-row ">
                         <div class="col-auto my-1">
-                            <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs a modifier</label>
+                            <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs </label>
                             <select name="newval"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                                 <option selected>Choose...</option>
                                 <option value="notebasdepage">Note de bas de page</option>
@@ -925,7 +925,7 @@ else {
                             </select>
                         </div>
                         <div class="col-auto my-1">
-                            <label>Nouvelle valeur</label>
+                            <label>Valeur a supprimer </label>
                             <input type="text" class="form-control" name="newvalue">
                         </div>
 
@@ -945,7 +945,7 @@ else {
                 <form action="php/delete/deleteLoc.php" method="post">
                     <div class="form-row ">
                         <div class="col-auto my-1">
-                            <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs a modifier</label>
+                            <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs </label>
                             <select name="newval"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                                 <option selected>Choose...</option>
                                 <option value="nom_ville">Ville</option>
@@ -954,7 +954,7 @@ else {
                             </select>
                         </div>
                         <div class="col-auto my-1">
-                            <label>Nouvelle valeur</label>
+                            <label>Valeur a supprimer </label>
                             <input type="text" class="form-control" name="newvalue">
                         </div>
 

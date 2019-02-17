@@ -2,8 +2,8 @@
 
 
 $conn_string = "host=localhost port=5432 dbname=projet user=utilisateur password=user";
-
 $connect = pg_connect($conn_string);
+
 
 
     $nbPhotoVille="SELECT distinct(localisation.nom_ville),MAX(nb_cliche) FROM detail_artistique,detail_photo,localisation
