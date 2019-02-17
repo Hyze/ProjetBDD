@@ -296,47 +296,47 @@ else {
             <div class="card-body">
                 <div id="insert">
                     <div id="comp">
-                        <form id="acomp"    >
+                        <form id="acomp">
                             <div class="form-row">
                                 <div class="col">
                                     <label>Date</label>
-                                    <input type="text" class="form-control" name="date">
+                                    <input type="text" class="form-control" id="fdate">
                                 </div>
                                 <div class="col">
                                     <label for="">Article</label>
-                                    <input type="text" class="form-control" name="article">
+                                    <input type="text" class="form-control" id="farticle">
                                 </div>
                                 <div class="col">
                                     <label for="">Reference cindoc</label>
-                                    <input type="text" class="form-control" name="reference_cindoc">
+                                    <input type="text" class="form-control" id="freference_cindoc">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col">
                                     <label>Serie</label>
-                                    <input type="text" class="form-control" name="serie">
+                                    <input type="text" class="form-control" id="fserie">
                                 </div>
                                 <div class="col">
                                     <label for="">Description</label>
-                                    <input type="text" class="form-control" name="description">
+                                    <input type="text" class="form-control" id="fdescription">
                                 </div>
                                 <div class="col">
                                     <label for="">index personne</label>
-                                    <input type="text" class="form-control" name="index_personne">
+                                    <input type="text" class="form-control" id="findex_personne">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col">
                                     <label>Negatif / Inversible </label>
-                                    <input type="text" class="form-control" name="negatif_reversible">
+                                    <input type="text" class="form-control" id="fnegatif_reversible">
                                 </div>
                                 <div class="col">
                                     <label for="">Couleur / noir et blanc</label>
-                                    <input type="text" class="form-control" name="couleur_noirblanc">
+                                    <input type="text" class="form-control" id="fcouleur_noirblanc">
                                 </div>
                                 <div class="col">
                                     <label for="">Discriminants</label>
-                                    <input type="text" class="form-control" name="discriminant">
+                                    <input type="text" class="form-control" id="fdiscriminant">
                                 </div>
                             </div>
 
@@ -349,19 +349,19 @@ else {
                             <div class="form-row">
                                 <div class="col">
                                     <label>Serie</label>
-                                    <input type="text" class="form-control" name="serie">
+                                    <input type="text" class="form-control" id="dserie">
                                 </div>
                                 <div class="col">
                                     <label for="">Article</label>
-                                    <input type="text" class="form-control" name="article">
+                                    <input type="text" class="form-control" id="darticle">
                                 </div>
                                 <div class="col">
                                     <label for="">Reference cindoc</label>
-                                    <input type="text" class="form-control" name="reference_cindoc">
+                                    <input type="text" class="form-control" id="dreference_cindoc">
                                 </div>
                                 <div class="col">
                                     <label for="">Discriminants</label>
-                                    <input type="text" class="form-control" name="discriminant">
+                                    <input type="text" class="form-control" id="ddiscriminant">
                                 </div>
                             </div>
 
@@ -377,15 +377,15 @@ else {
                             <div class="form-row">
                                 <div class="col">
                                     <label>Annee</label>
-                                    <input type="text" class="form-control" name="annee">
+                                    <input type="text" class="form-control" id="cannee">
                                 </div>
                                 <div class="col">
                                     <label for="">Mois</label>
-                                    <input type="text" class="form-control" name="mois">
+                                    <input type="text" class="form-control" id="cmois">
                                 </div>
                                 <div class="col">
                                     <label for="">Jour</label>
-                                    <input type="text" class="form-control" name="jour">
+                                    <input type="text" class="form-control" id="cjour">
                                 </div>
                             </div>
                             <button type="button" class="btn btn-primary" id="inserDate">Envoyer</button>
@@ -398,26 +398,26 @@ else {
                             <div class="form-row">
                                 <div class="col">
                                     <label>Remarque </label>
-                                    <input type="text" class="form-control" name="remarque">
+                                    <input type="text" class="form-control" id="aremarque">
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="col">
                                     <label>Nombre de cliché</label>
-                                    <input type="text" class="form-control" name="nb_cliche">
+                                    <input type="text" class="form-control" id="anb_cliche">
                                 </div>
                                 <div class="col">
                                     <label for="">Negatif / Inversible</label>
-                                    <input type="text" class="form-control" name="negatif_reversible">
+                                    <input type="text" class="form-control" id="anegatif_reversible">
                                 </div>
                                 <div class="col">
                                     <label for="">Couleur / Noir et blanc</label>
-                                    <input type="text" class="form-control" name="couleur_noirblanc">
+                                    <input type="text" class="form-control" id="acouleur_noirblanc">
                                 </div>
                                 <div class="col">
                                     <label for="">Taille du cliché</label>
-                                    <input type="text" class="form-control" name="taille_cliche">
+                                    <input type="text" class="form-control" id="ataille_cliche">
                                 </div>
                             </div>
                             <button type="button" class="btn btn-primary" id="inserdetA">Envoyer</button>
@@ -430,34 +430,34 @@ else {
                             <div class="form-row">
                                 <div class="col">
                                     <label>Article</label>
-                                    <input type="text" class="form-control" name="article">
+                                    <input type="text" class="form-control" id="barticle">
                                 </div>
                                 <div class="col">
                                     <label for="">Sujet</label>
-                                    <input type="text" class="form-control" name="sujet">
+                                    <input type="text" class="form-control" id="bsujet">
                                 </div>
                                 <div class="col">
                                     <label for="">Description</label>
-                                    <input type="text" class="form-control" name="description">
+                                    <input type="text" class="form-control" id="bdescription">
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="col">
                                     <label>Notes de bas de page</label>
-                                    <input type="text" class="form-control" name="notebasdepage">
+                                    <input type="text" class="form-control" id="bnotebasdepage">
                                 </div>
                                 <div class="col">
                                     <label for="">Fihier numérique</label>
-                                    <input type="text" class="form-control" name="fichier_numerique">
+                                    <input type="text" class="form-control" id="bfichier_numerique">
                                 </div>
                                 <div class="col">
                                     <label for="">Fichier iconographique</label>
-                                    <input type="text" class="form-control" name="fichier_iconographique">
+                                    <input type="text" class="form-control" id="bfichier_iconographique">
                                 </div>
                                 <div class="col">
                                     <label for="">Index personne</label>
-                                    <input type="text" class="form-control" name="index_personne">
+                                    <input type="text" class="form-control" id="bindex_personne">
                                 </div>
                             </div>
                             <button type="button" class="btn btn-primary" id="inserdetP">Envoyer</button>
@@ -470,15 +470,15 @@ else {
                             <div class="form-row">
                                 <div class="col">
                                     <label>Ville</label>
-                                    <input type="text" class="form-control" name="nom_ville">
+                                    <input type="text" class="form-control" id="nnom_ville">
                                 </div>
                                 <div class="col">
                                     <label for="">Latitude (Lambert93)</label>
-                                    <input type="text" class="form-control" name="lat">
+                                    <input type="text" class="form-control" id="nlat">
                                 </div>
                                 <div class="col">
                                     <label for="">Longitude (Lambert93)</label>
-                                    <input type="text" class="form-control" name="long">
+                                    <input type="text" class="form-control" id="nlong">
                                 </div>
                             </div>
                             <button type="button" class="btn btn-primary" id="inserLoc">envoyer</button>
@@ -490,12 +490,12 @@ else {
 
                 <div id="update">
                     <div id="updateComp">
-                        <form action="php/update/updateComp.php" method="post">
+                        <form>
 
                             <div class="form-row ">
                                 <div class="col-auto my-1">
                                     <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs a modifier</label>
-                                    <select name="valmodif"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                    <select id="valmodif"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                                         <option selected>Choose...</option>
                                         <option value="date">Date</option>
                                         <option value="article">Article</option>
@@ -513,7 +513,7 @@ else {
                                 </div>
                                 <div class="col-auto my-1">
                                     <label>Valeur a modifier</label>
-                                    <input type="text" class="form-control" name="valuemodif">
+                                    <input type="text" class="form-control" id="valuemodif">
                                 </div>
 
                             </div>
@@ -521,7 +521,7 @@ else {
                             <div class="form-row ">
                                 <div class="col-auto my-1">
                                     <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs a modifier</label>
-                                    <select name="newval"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                    <select id="new" name="newval"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                                         <option selected>Choose...</option>
                                         <option value="date">Date</option>
                                         <option value="article">Article</option>
@@ -539,19 +539,19 @@ else {
                                 </div>
                                 <div class="col-auto my-1">
                                     <label>Nouvelle valeur</label>
-                                    <input type="text" class="form-control" name="newvalue">
+                                    <input type="text" class="form-control" id="newvalue">
                                 </div>
 
                             </div>
                             <div class="col-auto my-1">
-                                <button type="button" class="btn btn-primary" id="uComp">Submit</button>
+                                <button type="button" class="btn btn-primary" id="uComp">Envoyer</button>
                             </div>
                         </form>
 
                     </div>
 
                     <div id="updateAdm">
-                        <form action="php/update/updateAdm.php" method="post">
+                        <form >
 
                             <div class="form-row ">
                                 <div class="col-auto my-1">
@@ -589,7 +589,7 @@ else {
 
                             </div>
                             <div class="col-auto my-1">
-                                <button type="submit" class="btn btn-primary" id="uAdm">Submit</button>
+                                <button type="button" class="btn btn-primary" id="uAdm">Submit</button>
                             </div>
                         </form>
 
@@ -600,7 +600,7 @@ else {
 
 
                     <div id="updateDate">
-                        <form action="php/update/updateDate.php" method="post">
+                        <form >
                             <div class="form-row ">
                                 <div class="col-auto my-1">
                                     <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs a modifier</label>
@@ -635,7 +635,7 @@ else {
 
                             </div>
                             <div class="col-auto my-1">
-                                <button type="submit" class="btn btn-primary" id="uDate">Submit</button>
+                                <button type="button" class="btn btn-primary" id="uDate">Submit</button>
                             </div>
                         </form>
 
@@ -644,7 +644,7 @@ else {
 
 
                     <div id="updatedetA">
-                        <form action="php/update/updatedetA.php" method="post">
+                        <form >
 
                             <div class="form-row ">
                                 <div class="col-auto my-1">
@@ -686,7 +686,7 @@ else {
 
                             </div>
                             <div class="col-auto my-1">
-                                <button type="submit" class="btn btn-primary" id="udetA">Submit</button>
+                                <button type="button" class="btn btn-primary" id="udetA">Submit</button>
                             </div>
                         </form>
 
@@ -694,7 +694,7 @@ else {
 
 
                     <div id="updatedetP">
-                        <form action="php/update/updatedetP.php" method="post">
+                        <form >
 
                             <div class="form-row ">
                                 <div class="col-auto my-1">
@@ -738,7 +738,7 @@ else {
 
                             </div>
                             <div class="col-auto my-1">
-                                <button type="submit" class="btn btn-primary" id="udetP">Submit</button>
+                                <button type="button" class="btn btn-primary" id="udetP">Submit</button>
                             </div>
                         </form>
 
@@ -746,7 +746,7 @@ else {
 
 
                     <div id="updateLoc">
-                        <form action="php/update/updateLoc.php" method="post">
+                        <form >
                             <div class="form-row ">
                                 <div class="col-auto my-1">
                                     <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs a modifier</label>
@@ -781,7 +781,7 @@ else {
 
                             </div>
                             <div class="col-auto my-1">
-                                <button type="submit" class="btn btn-primary" id="uLoc">Submit</button>
+                                <button type="button" class="btn btn-primary" id="uLoc">Submit</button>
                             </div>
                         </form>
 
@@ -789,7 +789,74 @@ else {
 
                 </div> <!--update part -->
 
+        <div id="delete">
+            <form >
 
+                <div class="form-row ">
+                    <div class="col-auto my-1">
+                        <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs a modifier</label>
+                        <select name="valmodif"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                            <option selected>Choose...</option>
+                            <option value="date">Date</option>
+                            <option value="article">Article</option>
+                            <option value="reference_cindoc">Reference Cindoc</option>
+                            <option value="serie">Serie</option>
+                            <option value="nom_ville">Nom ville</option>
+                            <option value="sujet">sujet</option>
+                            <option value="description">Description</option>
+                            <option value="index_personne">Index personne</option>
+                            <option value="nb_cliche">Nombre de cliché</option>
+                            <option value="negatif_reversible">Negatif / Inversible</option>
+                            <option value="couleur_noirblanc">Couleur / Noir et blanc</option>
+                            <option value="discriminant">Discriminant</option>
+                        </select>
+                    </div>
+                    <div class="col-auto my-1">
+                        <label>Valeur a modifier</label>
+                        <input type="text" class="form-control" name="valuemodif">
+                    </div>
+
+                </div>
+
+                <div class="form-row ">
+                    <div class="col-auto my-1">
+                        <label class="mr-sm-2" for="inlineFormCustomSelect">Selectionner le champs a modifier</label>
+                        <select name="newval"class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                            <option selected>Choose...</option>
+                            <option value="date">Date</option>
+                            <option value="article">Article</option>
+                            <option value="reference_cindoc">Reference Cindoc</option>
+                            <option value="serie">Serie</option>
+                            <option value="nom_ville">Nom ville</option>
+                            <option value="sujet">sujet</option>
+                            <option value="description">Description</option>
+                            <option value="index_personne">Index personne</option>
+                            <option value="nb_cliche">Nombre de cliché</option>
+                            <option value="negatif_reversible">Negatif / Inversible</option>
+                            <option value="couleur_noirblanc">Couleur / Noir et blanc</option>
+                            <option value="discriminant">Discriminant</option>
+                        </select>
+                    </div>
+                    <div class="col-auto my-1">
+                        <label>Nouvelle valeur</label>
+                        <input type="text" class="form-control" name="newvalue">
+                    </div>
+
+                </div>
+                <div class="col-auto my-1">
+                    <button type="button" class="btn btn-primary" id="uComp">Submit</button>
+                </div>
+            </form>
+
+        </div>
+
+
+
+
+
+
+
+            </div><!---delete part -->
 
 
 
@@ -822,7 +889,7 @@ if($_SESSION['login']=='user'){
 <script defer src="js/monjs.js" type="text/javascript"></script>
 <script async src="js/bootstrap.js" type="text/javascript"></script>
 <script async src="js/bootstrap.bundle.js"></script>
-<script async type="text/javascript" src="js/table.js"></script>
+<script defer type="text/javascript" src="js/table.js"></script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 <script async type="text/javascript" src="js/pace.min.js"></script>
 <script async src="js/Chart.js"></script>

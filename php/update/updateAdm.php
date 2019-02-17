@@ -46,11 +46,11 @@ $newvalue=$_POST['newvalue'];
 $conn_string = "host=localhost port=5432 dbname=projet user=administrateur  password=admin";
 
 if($connect = pg_connect($conn_string)){
-    echo 'connect done';
+
 }
 $requete="UPDATE administratif SET $new='$newvalue' WHERE $amodifier='$valuechercher';";
 
-echo $requete;
+
 
 if (pg_query($connect,$requete))
     echo "saved";

@@ -77,24 +77,23 @@ if(!$_POST['discriminants']){
 $conn_string = "host=localhost port=5432 dbname=projet user=administrateur  password=admin";
 
 if($connect = pg_connect($conn_string)){
-    echo 'connect done';
+
 }
 
-//$requete="INSERT INTO acompleter VALUES('".$date."', '".$article."', '".$ref."', '".$serie."', '".$ville."', ".$sujet."','".$desc."','".$index."','".$cliche."','".$neg."', '".$couleur."','".$dis."')'";
-$requete="INSERT INTO acompleter VALUES('$date','$article', '.$ref', '$serie','$ville', '$sujet','$desc','$index','$cliche','$neg', '$couleur','$dis')";
+$requete="INSERT INTO acompleter VALUES('$date','$article','.$ref','$serie','$ville','$sujet','$desc','$index','$cliche','$neg','$couleur','$dis')";
 
-echo $requete;
-/*
+
+
 if (pg_query($connect,$requete))
     echo "saved";
 else
     echo "error insering data";
-*/
+
 if (!pg_close($connect)) {
     echo "Failed to close connection to " . pg_host($connect) . ": " .
         pg_last_error($connect) . "<br/>\n";
 }
 
 
-//header('Location: ../main.php');
+
  ?>

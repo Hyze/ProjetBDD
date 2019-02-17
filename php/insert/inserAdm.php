@@ -36,13 +36,12 @@ if($connect = pg_connect($conn_string)){
 
 $requete="INSERT INTO administratif VALUES('$serie', '$article', '$ref','$dis')";
 
-echo $requete;
-/*
+
 if (pg_query($connect,$requete))
     echo "saved";
 else
     echo "error insering data";
-*/
+
 if (!pg_close($connect)) {
     echo "Failed to close connection to " . pg_host($connect) . ": " .
         pg_last_error($connect) . "<br/>\n";

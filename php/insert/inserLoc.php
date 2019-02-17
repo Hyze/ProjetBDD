@@ -46,13 +46,12 @@ $requete="INSERT INTO localisation VALUES('$id_ville','$nom','$id_date','$lat', 
 
 
 
-echo $requete;
-/*
+
 if (pg_query($connect,$requete))
     echo "saved";
 else
     echo "error insering data";
-*/
+
 if (!pg_close($connect)) {
     echo "Failed to close connection to " . pg_host($connect) . ": " .
         pg_last_error($connect) . "<br/>\n";
