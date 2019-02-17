@@ -109,13 +109,13 @@ $(document).ready(function() {
   function constructloc(data) {
 
     var tab = '<thead>' +
-      '<tr>' +
-      '<th>ID ville</th>' +
-      '<th>Nom</th>' +
-      '<th>Latitude (Lambert93) </th>' +
-      '<th>Longitude (Lambert93)</th>' +
-      '</tr>' +
-      '  </thead>';
+        '<tr>' +
+        '<th>ID ville</th>' +
+        '<th>Nom</th>' +
+        '<th>Latitude (Lambert93) </th>' +
+        '<th>Longitude (Lambert93)</th>' +
+        '</tr>' +
+        '  </thead>';
 
 
 
@@ -124,12 +124,12 @@ $(document).ready(function() {
 
     for (var j = 0; j < data.length; j++) {
       var content = content + '<tr>' +
-        '<td>' + data[j].id_ville + '</td>' +
-        '<td>' + data[j].nom_ville + '</td>' +
-        '<td>' + data[j].latlambert93 + '</td>' +
-        '<td>' + data[j].longlambert93 + '</td>' +
+          '<td>' + data[j].id_ville + '</td>' +
+          '<td>' + data[j].nom_ville + '</td>' +
+          '<td>' + data[j].latlambert93 + '</td>' +
+          '<td>' + data[j].longlambert93 + '</td>' +
 
-        ' </tr>'
+          ' </tr>'
 
     }
 
@@ -164,16 +164,16 @@ $(document).ready(function() {
   function constructdetP(data) {
 
     var tab = '<thead>' +
-      '<tr>' +
-      '<th>ID photo</th>' +
-      '<th>Article</th>' +
-      '<th>Description</th>' +
-      '  <th>Sujet</th>' +
-      '  <th>Notes de bas de page</th>' +
-      '<th>Fichier numerique  </th>' +
-      '<th>Fichier iconographique </th>' +
-      '  </tr>' +
-      '</thead>';
+        '<tr>' +
+        '<th>ID photo</th>' +
+        '<th>Article</th>' +
+        '<th>Description</th>' +
+        '  <th>Sujet</th>' +
+        '  <th>Notes de bas de page</th>' +
+        '<th>Fichier numerique  </th>' +
+        '<th>Fichier iconographique </th>' +
+        '  </tr>' +
+        '</thead>';
 
     var bodystart = '<tbody>'
     var tbodyfin = "</tbody>"
@@ -189,14 +189,14 @@ $(document).ready(function() {
 
 
       var content = content + '<tr>' +
-        '<td>' + photo + '</td>' +
-        '<td>' + article + '</td>' +
-        '<td>' + desc + '</td>' +
-        '<td>' + sujet + '</td>' +
-        '<td>' + note + '</td>' +
-        '<td>' + file + '</td>' +
-        '<td>' + fich + '</td>' +
-        ' </tr>'
+          '<td>' + photo + '</td>' +
+          '<td>' + article + '</td>' +
+          '<td>' + desc + '</td>' +
+          '<td>' + sujet + '</td>' +
+          '<td>' + note + '</td>' +
+          '<td>' + file + '</td>' +
+          '<td>' + fich + '</td>' +
+          ' </tr>'
 
     }
 
@@ -238,15 +238,15 @@ $(document).ready(function() {
   function constructdetA(data) {
 
     var tab = ' <thead>' +
-      '  <tr>' +
-      '  <th>ID photo</th>' +
-      '  <th>Nombre de cliche</th>' +
-      '<th>Negatif / Inversible</th>' +
-      '  <th>Couleur / Noir et Blanc</th>' +
-      '<th>Remarque</th>' +
-      '<th>Taille du cliche</th>' +
-      '</tr>' +
-      '</thead>';
+        '  <tr>' +
+        '  <th>ID photo</th>' +
+        '  <th>Nombre de cliche</th>' +
+        '<th>Negatif / Inversible</th>' +
+        '  <th>Couleur / Noir et Blanc</th>' +
+        '<th>Remarque</th>' +
+        '<th>Taille du cliche</th>' +
+        '</tr>' +
+        '</thead>';
 
     var bodystart = '<tbody>'
     var tbodyfin = "</tbody>"
@@ -290,12 +290,12 @@ $(document).ready(function() {
   function constructdate(data) {
 
     var tab = '<thead>' +
-      '<tr>' +
-      '  <th>ID date</th>' +
-      '<th>Jour</th>' +
-      '  <th>Mois</th>' +
-      '<th>Année</th>' +
-      '</tr>'
+        '<tr>' +
+        '  <th>ID date</th>' +
+        '<th>Jour</th>' +
+        '  <th>Mois</th>' +
+        '<th>Année</th>' +
+        '</tr>'
     '</thead>'
     var bodystart = '<tbody>'
     var tbodyfin = "</tbody>"
@@ -357,12 +357,12 @@ $(document).ready(function() {
   function constructAdm(data) {
 
     var tab = '<thead> <tr>' +
-      '  <th>Reference Cindoc</th>' +
-      '<th>Serie</th>' +
-      '<th>Article</th>' +
-      '<th>Discriminants</th>' +
-      '</tr>' +
-      '</thead>';
+        '  <th>Reference Cindoc</th>' +
+        '<th>Serie</th>' +
+        '<th>Article</th>' +
+        '<th>Discriminants</th>' +
+        '</tr>' +
+        '</thead>';
     var bodystart = '<tbody>'
     var tbodyfin = "</tbody>"
 
@@ -385,33 +385,26 @@ $(document).ready(function() {
 
 
     var tab = '  <thead> <tr>' +
-      '<th>Date</th>' +
-      '<th>Article</th>' +
-      '<th>Reference Cindoc</th>' +
-      ' <th>Serie</th>' +
-      '<th>Ville</th>' +
-      '<th>Sujet</th>' +
-      '  <th>Description</th>' +
-      '<th>Nombre de cliche</th>' +
-      '<th>Negatif / Inversible</th>' +
-      '  <th>Couleur / Noir et Blanc</th>' +
-<<<<<<< HEAD
+        '<th>Date</th>' +
+        '<th>Article</th>' +
+        '<th>Reference Cindoc</th>' +
+        ' <th>Serie</th>' +
+        '<th>Ville</th>' +
+        '<th>Sujet</th>' +
+        '  <th>Description</th>' +
+        '<th>Nombre de cliche</th>' +
+        '<th>Negatif / Inversible</th>' +
+        '  <th>Couleur / Noir et Blanc</th>' +
         '<th>Index personne</th>'+
-=======
->>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
-      '  <th>Discriminants</th>' +
-      '</tr>' +
-      '  </thead>';
+        '  <th>Discriminants</th>' +
+        '</tr>' +
+        '  </thead>';
     var bodystart = '<tbody>'
     var tbodyfin = "</tbody>"
 
     for (var i = 0; i < data.length; i++) {
 
-<<<<<<< HEAD
       var content = content + '<tr> <td>' + data[i].date + '</td>' + '<td>' + data[i].article + '</td>' + '<td>' + data[i].reference_cindoc + '</td>' + '<td>' + data[i].serie + '</td>' + '<td>' + data[i].nom_ville + '</td>' + '<td>' + data[i].sujet + '</td>' + '<td>' + data[i].description + '</td>' + '<td>' + data[i].nb_cliche + '</td>' + '<td>' + data[i].negatif_reversible + '</td>' + '<td>' + data[i].couleur_noirblanc + '</td>' +'<td>'+ data[i].index_personne+'</td>' +'<td>' + data[i].discriminant + '</td> </tr>'
-=======
-      var content = content + '<tr> <td>' + data[i].date + '</td>' + '<td>' + data[i].article + '</td>' + '<td>' + data[i].reference_cindoc + '</td>' + '<td>' + data[i].serie + '</td>' + '<td>' + data[i].nom_ville + '</td>' + '<td>' + data[i].sujet + '</td>' + '<td>' + data[i].description + '</td>' + '<td>' + data[i].nb_cliche + '</td>' + '<td>' + data[i].negatif_reversible + '</td>' + '<td>' + data[i].couleur_noirblanc + '</td>' + '<td>' + data[i].discriminant + '</td> </tr>'
->>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
 
     }
     var table = tab + bodystart + content + tbodyfin;

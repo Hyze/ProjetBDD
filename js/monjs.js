@@ -1,18 +1,15 @@
 $(document).ready(function() {
 
   $('#sidebarCollapse')
-    .on('click', function() {
-      $('#sidebar')
-        .toggleClass('active');
-      $(this)
-        .toggleClass('active');
-    });
+      .on('click', function() {
+        $('#sidebar')
+            .toggleClass('active');
+        $(this)
+            .toggleClass('active');
+      });
 
   $('#visualisation').hide();
-<<<<<<< HEAD
   $('#modif').hide();
-=======
->>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
 
   $("#stat").click(function() {
     $('#visualisation').hide();
@@ -27,16 +24,12 @@ $(document).ready(function() {
   $("#stat1").click(function() {
     $('#visualisation').hide();
     $('#Home').show();
-<<<<<<< HEAD
     $('#modif').hide();
-=======
->>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
   });
 
   $("#visu1").click(function() {
     $('#Home').hide();
     $('#visualisation').show();
-<<<<<<< HEAD
     $('#modif').hide();
   });
 
@@ -54,13 +47,9 @@ $(document).ready(function() {
 
 
 
-=======
-  });
-
->>>>>>> c744ebc8f575b2a67ae77ff10be2667a5e02cfb6
   function graphe1_construct(data) {
     var pie = document.getElementById('Pie')
-      .getContext('2d');
+        .getContext('2d');
     var tableau = JSON.parse(data);
     var array = Object.values(tableau);
 
@@ -95,7 +84,7 @@ $(document).ready(function() {
     var array = Object.values(tableau);
 
     var PhotoVille = document.getElementById('photoVille')
-      .getContext('2d');
+        .getContext('2d');
     var i = 0;
     var nom = [];
     var val = [];
@@ -150,7 +139,7 @@ $(document).ready(function() {
 
   function construc_graph3(data) {
     var pie = document.getElementById('incomplet')
-      .getContext('2d');
+        .getContext('2d');
     var tableau = JSON.parse(data);
     var array = Object.values(tableau);
 
