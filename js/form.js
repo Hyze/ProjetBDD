@@ -197,9 +197,7 @@ $(document).ready(function() {
             url: "php/insert/inserComp.php",
             data : values,
             dataType : 'html',
-            success: function() {
-                console.log(values);
-            },
+            success: alert("Donnée inserer"),
 
         })
     });
@@ -213,10 +211,7 @@ $(document).ready(function() {
             type: 'POST',
             url: "php/insert/inserAdm.php",
             data: values,
-            success: function() {
-                console.log(values);
-            },
-
+            success: alert("Donnée inserer"),
         })
     });
     $('#inserDate').click(function () {
@@ -228,10 +223,7 @@ $(document).ready(function() {
             type: 'POST',
             url: "php/insert/inserDate.php",
             data:values,
-            success: function() {
-                console.log(values);
-            },
-
+            success: alert("Donnée inserer"),
         })
     });
 
@@ -245,9 +237,7 @@ $(document).ready(function() {
             type: 'POST',
             url: "php/insert/inserdetA.php",
             data: values,
-            success: function() {
-                console.log(values);
-            },
+            success: alert("Donnée inserer"),
 
         })
     });
@@ -263,9 +253,7 @@ $(document).ready(function() {
             type: 'POST',
             url: "php/insert/inserdetP.php",
             data:values,
-            success: function() {
-                console.log(values);
-            },
+            success:alert("Donnée inserer"),
 
         })
     });
@@ -278,9 +266,7 @@ $(document).ready(function() {
             type: 'POST',
             url: "php/insert/inserLoc.php",
             data : values,
-            success: function() {
-                console.log(values);
-            },
+            success:alert("Donnée inserer"),
 
         })
     });
@@ -290,9 +276,193 @@ $(document).ready(function() {
     // RECUP la val des bouttons une fois fait ca sera bons
 
 
+    $("#uComp").click(function(){
+      var values = 'selectFieldValue='+$("select#selectionner").val() +
+      '&valuemodif='+$('input[name$="valuemodif"]').val()+
+      "&amodifier="+$('select#amodifier').val()+
+      "&newvalue="+$('input[name$="newvalue"]').val();
+      var flague1 = $('input[name$="valuemodif"]').val();
+      var flague2=$('input[name$="newvalue"]').val();
+      if(flague1 !="" && flague2!=""){
+      $.ajax({
+        type : 'POST',
+        url:'php/update/updateComp.php',
+        data : values,
+        dataType: 'html',
+        success : alert("Donnée mise a jour"),
+      });
+    }
+    });
+
+
+    $("#uAdm").click(function(){
+      var values = 'selectFieldValue='+$("select#selectionnerA").val() +
+      '&valuemodif='+$('input[name$="valuemodifA"]').val()+
+      "&amodifier="+$('select#amodifierA').val()+
+      "&newvalue="+$('input[name$="newvalueA"]').val();
+      var flague1 =$('input[name$="valuemodifA"]').val();
+      var flague2 = $('input[name$="newvalueA"]').val();
+      if(flague1 !="" && flague2!=""){
+      $.ajax({
+        type : 'POST',
+        url:'php/update/updateAdm.php',
+        data : values,
+        dataType: 'html',
+        success :alert("Donnée mise a jour"),
+      });
+    }
+    });
+
+    $("#uDate").click(function(){
+      var values = 'selectFieldValue='+$("select#selectionnerB").val() +
+      '&valuemodif='+$('input[name$="valuemodifB"]').val()+
+      "&amodifier="+$('select#amodifierB').val()+
+      "&newvalue="+$('input[name$="newvalueB"]').val();
+      var flague1 = $('input[name$="valuemodifB"]').val();
+      var flague2 =$('input[name$="newvalueB"]').val();
+  if(flague1 !="" && flague2!=""){
+      $.ajax({
+        type : 'POST',
+        url:'php/update/updateDate.php',
+        data : values,
+        dataType: 'html',
+        success : alert("Donnée mise a jour"),
+      });
+    }
+    });
+
+
+    $("#udetP").click(function(){
+      var values = 'selectFieldValue='+$("select#selectionnerD").val() +
+      '&valuemodif='+$('input[name$="valuemodifD"]').val()+
+      "&amodifier="+$('select#amodifierD').val()+
+      "&newvalue="+$('input[name$="newvalueD"]').val();
+        var flague1 = $('input[name$="valuemodifD"]').val();
+        var flague2 = $('input[name$="newvalueD"]').val();
+        if( flague1!="" && flague2!=""){
+      $.ajax({
+        type : 'POST',
+        url:'php/update/updatedetP.php',
+        data : values,
+        dataType: 'html',
+        success :alert("Donnée mise a jour"),
+      });
+    }
+    });
+
+    $("#uLoc").click(function(){
+      var values = 'selectFieldValue='+$("select#selectionnerE").val() +
+      '&valuemodif='+$('input[name$="valuemodifE"]').val()+
+      "&amodifier="+$('select#amodifierE').val()+
+      "&newvalue="+$('input[name$="newvalueE"]').val();
+        var flague1 = $('input[name$="valuemodifE"]').val();
+        var flague2 = $('input[name$="newvalueE"]').val();
+        if( flague1!="" && flague2!=""){
+      $.ajax({
+        type : 'POST',
+        url:'php/update/updateLoc.php',
+        data : values,
+        dataType: 'html',
+        success :alert("Donnée mise a jour"),
+      });
+    }
+    });
 
 
 
 
+
+    $("#delComp").click(function(){
+      var values = 'selectFieldValue='+$("select#selectionnerF").val() +
+      "&newvalue="+$('input[name$="newvalueF"]').val();
+        var flague = $('input[name$="newvalueF"]').val();
+        if( flague != ""){
+      $.ajax({
+        type : 'POST',
+        url:'php/delete/delComp.php',
+        data : values,
+        dataType: 'html',
+        success : alert("Donnée supprimer"),
+      });
+    }
+    });
+    $("#deladm").click(function(){
+      var values = 'selectFieldValue='+$("select#selectionnerG").val() +
+      "&newvalue="+$('input[name$="newvalueG"]').val();
+        var flague = $('input[name$="newvalueG"]').val();
+        if( flague !=""){
+
+      $.ajax({
+        type : 'POST',
+        url:'php/delete/deleteAdm.php',
+        data : values,
+        dataType: 'html',
+        success :  alert("Donnée supprimer"),
+      });
+    }
+    });
+
+    $("#delDate").click(function(){
+      var values = 'selectFieldValue='+$("select#selectionnerH").val() +
+      "&newvalue="+$('input[name$="newvalueH"]').val();
+      var flague = $('input[name$="newvalueH"]').val();
+      if(flague != "" ){
+      $.ajax({
+        type : 'POST',
+        url:'php/delete/deleteDate.php',
+        data : values,
+        dataType: 'html',
+        success :  alert("Donnée supprimer"),
+      });
+    }
+    });
+
+
+
+    $("#deldeta").click(function(){
+      var values = 'selectFieldValue='+$("select#selectionnerI").val() +
+      "&newvalue="+$('input[name$="newvalueI"]').val();
+      var flague = $('input[name$="newvalueI"]').val();
+      if( flague != "" ){
+      $.ajax({
+        type : 'POST',
+        url:'php/delete/deldetA.php',
+        data : values,
+        dataType: 'html',
+        success :  alert("Donnée supprimer"),
+      });
+    }
+    });
+
+    $("#deldetP").click(function(){
+      var values = 'selectFieldValue='+$("select#selectionnerJ").val() +
+      "&newvalue="+$('input[name$="newvalueJ"]').val();
+      var flague  =$('input[name$="newvalueJ"]').val() ;
+      if( flague != ""){
+      $.ajax({
+        type : 'POST',
+        url:'php/delete/deldetP.php',
+        data : values,
+        dataType: 'html',
+        success : alert("Donnée supprimer"),
+      });
+    }
+    });
+
+
+    $("#delLoc").click(function(values){
+      var values = 'selectFieldValue='+$("#selectionnerK").val() +
+      "&newvalue="+$('input[name$="newvalueK"]').val();
+      var tes = $('input[name$="newvalueK"]').val()
+      if( tes != ""){
+      $.ajax({
+        type : 'POST',
+        url:'php/delete/deleteLoc.php',
+        data : values,
+        dataType: 'html',
+        success : alert("Donnée supprimer"),
+      });
+    }
+    });
 
 });
